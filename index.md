@@ -9,7 +9,7 @@ carousels:
     - image: images/radar_tripod_crop.jpg
 ---
 
-#  We develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
+#  At the High-precition Imaging, Signals N' Radar (HI-SNR) Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
 
 {% include carousel.html height="50" unit="%" duration="5" number="1" %}
 
