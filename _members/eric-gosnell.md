@@ -5,7 +5,7 @@ description: Undergraduate Student Researcher
 role: Student
 
 links:
-    github: ericgosnell
+    home-page: https://ericgosnell.github.io/
 ---
 
  

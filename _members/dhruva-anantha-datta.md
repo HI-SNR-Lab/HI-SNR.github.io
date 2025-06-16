@@ -7,7 +7,7 @@ role: Student
 links:
   home-page: https://www.dhruva-ananth.com/
   orcid: 0000-0001-6573-3596
-  linked-in: https://www.linkedin.com/in/ananthadattad/
+  linkedin: https://www.linkedin.com/in/ananthadattad/
   github: Dhruva-Ananth
 ---
 
