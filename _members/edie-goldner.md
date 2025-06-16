@@ -1,8 +1,8 @@
 ---
 name: Edie Goldner
-image: images/members/Edie_Golder.jpg
+image: images\members\Edie_Goldner.jpg
 role: Undergraduate Researcher
-group: student
+affiliation: student
 description: Undergraduate Student Researcher
 ---
 

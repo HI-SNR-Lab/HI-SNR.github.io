@@ -1,8 +1,9 @@
 ---
 name: Dhruva Anantha Datta
-image: images/members/Dhruva_Anantha_Datta.jpg
+image: images\members\Dhruva_Ananth_Datta.jpg
 role: Graduate Student Researcher
-affiliation: Student
+affiliation: student
+description: Graduate Student Researcher
 
 links:
   portfolio: https://www.dhruva-ananth.com/

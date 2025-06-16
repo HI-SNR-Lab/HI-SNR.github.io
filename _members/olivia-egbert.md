@@ -2,7 +2,8 @@
 name: Olivia Egbert
 image: images/members/Olivia_Egbert.jpg
 role: Graduate Student Researcher
-affiliation: Student
+affiliation: student
+description: Graduate Student Researcher
 
 links:
   home-page: https://www.linkedin.com/in/olive-egbert/
@@ -12,4 +13,3 @@ Olivia is a Master's student studying Electrical Engineering at the University o
 
 In her undergraduate studies, Olivia was an 2023/2024 IEEE Scholar, an active member of Engineers Without Borders-CMU, and earned the 2024 Outstanding Undergraduate Award from the Electrical Engineering Department at University of Colorado. Currently she is an RF Test Engineer at local weather satellite and analytics company Weather Stream.
 
-<!-- test >
