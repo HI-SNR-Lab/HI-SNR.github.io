@@ -144,14 +144,14 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  html-proofer (~> 5.0)
-  jekyll (~> 4.3)
+  html-proofer (>= 5.0)
+  jekyll (>= 4.3)
   jekyll-feed
   jekyll-last-modified-at
   jekyll-redirect-from
   jekyll-sitemap
   jekyll-spaceship
-  webrick (~> 1.7)
+  webrick (>= 1.7)
 
 BUNDLED WITH
    2.5.6
