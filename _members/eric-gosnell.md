@@ -1,12 +1,11 @@
 ---
 name: Eric Gosnell
-image: images\members\Eric_Gosnell.jpg
-role: Undergraduate Student Researcher
-affiliation: student
+image: images/members/Eric_Gosnell.jpg
 description: Undergraduate Student Researcher
+role: Student
 
 links:
-    github: https://ericgosnell.github.io/
+    github: ericgosnell
 ---
 
  

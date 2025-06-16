@@ -1,8 +1,7 @@
 ---
 name: Olivia Egbert
 image: images/members/Olivia_Egbert.jpg
-role: Graduate Student Researcher
-affiliation: student
+role: Student
 description: Graduate Student Researcher
 
 links:

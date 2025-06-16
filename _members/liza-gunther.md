@@ -1,8 +1,7 @@
 ---
 name: Liza Gunther
 image: images/members/Liza_Gunther.jpg
-role: Graduate Student Researcher
-group: student
+role: Student
 description: Graduate Student Researcher
 ---
 
