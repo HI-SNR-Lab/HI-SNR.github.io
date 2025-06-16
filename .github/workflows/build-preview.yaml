@@ -32,9 +32,9 @@ jobs:
 
       - name: Install Ruby packages
         if: github.event.action != 'closed'
-        uses: ruby/setup-ruby@v1.172.0
+        uses: ruby/setup-ruby@v1.245.0
         with:
-          ruby-version: "3.1"
+          ruby-version: "3.4.4"
           bundler-cache: true
 
       - name: Get Pages url
