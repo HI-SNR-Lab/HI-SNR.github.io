@@ -73,10 +73,11 @@ in either academia or industry."
 
 {% include section.html dark=true %}
 
+**Prospective PhD Students: To mitigate bias, we no longer meet or correspond with potential PhD applicants outside of the standard [CU application process](https://www.colorado.edu/ecee/admissions/graduate-admissions). ** If you are interested in joining the lab as a PhD student, please apply be sure to select Professor Nicole Bienert as a potential advisor in the application portal - this will route your application to Prof. Bienert.
 
-Please email Professor Nicole Bienert at bienert AT colorado dot edu to discuss opportunities. Please include the following information:  
+ **Prospective Postdoc and Volunteers:** 
+ email Professor Nicole Bienert at bienert AT colorado dot edu to discuss opportunities. Please include the following information:  
 - What are you interested in researching and why? What excites you?
 - Please link your resume or CV
 - A bit of information about yourself so that we can get to know you (this is our favorite part!)
-- If you have any of the following handy, we would love to read your diversity statement, personal statement, and / or research statement. These statements help us understand how you could contribute to our team's inclusive, creative, and positive atmosphere. Don't worry if you don't have these documents available. 
 
