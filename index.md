@@ -7,6 +7,8 @@ carousels:
     - image: images/Tents.jpg
     - image: images/testing_with_Neo.jpg
     - image: images/radar_tripod_crop.jpg
+    - image: images/summer_2025_testing.jpg
+    - image: images/summer_2025_testing_2.jpg
 ---
 
 #  At the High precision Imaging, Signals N Radar HI SNR Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
@@ -46,7 +48,7 @@ We are developing radars and data assimilation techniques for 3D mapping of vege
 
 {%
   include button.html
-  link="projects"
+  link="research"
   text="See our publications"
   icon="fa-solid fa-arrow-right"
   flip=true
@@ -58,7 +60,7 @@ We are developing radars and data assimilation techniques for 3D mapping of vege
 {%
   include feature.html
   image="images/tree_radar.gif"
-  link="projects"
+  link="research"
   title="Biosphere Radars"
   flip=true
   style="bare"
@@ -67,11 +69,11 @@ We are developing radars and data assimilation techniques for 3D mapping of vege
 
 {% capture text %}
 
-We are creating new methods of monitoring our limitted resources including drone-based soil moisture estimation and satellite-based aquifer volume retreivals.
+We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.
 
 {%
   include button.html
-  link="team"
+  link="research"
   text="See our publications"
   icon="fa-solid fa-arrow-right"
   flip=true
@@ -83,7 +85,7 @@ We are creating new methods of monitoring our limitted resources including drone
 {%
   include feature.html
   image="images/drone_ani.gif"
-  link="team"
+  link="research"
   title="Near Subsurface Radar"
   text=text
 %}
@@ -95,7 +97,7 @@ We develop imaging algorithms not only for radar, but also for cameras. We focus
 
 {%
   include button.html
-  link="projects"
+  link="research"
   text="See our publications"
   icon="fa-solid fa-arrow-right"
   flip=true
@@ -107,7 +109,7 @@ We develop imaging algorithms not only for radar, but also for cameras. We focus
 {%
   include feature.html
   image="images/camera_testing.jpg"
-  link="projects"
+  link="research"
   title="Computational Photography"
   flip=true
   style="bare"

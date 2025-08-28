@@ -10,7 +10,7 @@ nav:
 The High-quality Imaging, Signals, N' Radar (HI-SNR) laboratory develops data assimilation, computational imaging, and signal processing methods in two areas:
 
 <details close>
-<summary>1. Multistatic Radar for Environmental Applications?</summary>
+<summary>1. Multistatic Radar for Environmental Applications</summary>
 <br>
 We develop multistatic radars and algorithms for retreiving properties of the environment for the following purposes:
   1. Equip scientists with the tools needed to improve our understanding of the environment. We develop radar-based methods for making measurements of environmental processes at a quality or scale that is not possible with existing tools. This includes projects such as generating 2D maps of the temperature distribution inside glaciers.
@@ -20,7 +20,7 @@ We develop multistatic radars and algorithms for retreiving properties of the en
 </details>
 
 <details close>
-<summary>2. Computational Photography?</summary>
+<summary>2. Computational Photography</summary>
 <br>
 We develop computational photography algorithms that improve image quality and make camera performance more equitable.
 </details>
