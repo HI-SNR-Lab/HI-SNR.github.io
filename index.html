@@ -400,14 +400,14 @@
       
     
       
-        <a href="/HI-SNR.github.io/projects/" data-tooltip="Software, datasets, and more">
-          Projects
+        <a href="/HI-SNR.github.io/team/" data-tooltip="About our team">
+          Team
         </a>
       
     
       
-        <a href="/HI-SNR.github.io/team/" data-tooltip="About our team">
-          Team
+        <a href="/HI-SNR.github.io/projects/" data-tooltip="Software, datasets, and more">
+          Projects
         </a>
       
     
@@ -455,13 +455,17 @@
         
           <input class="carousel__activator" type="radio" name="carousel0" id="0f">
         
+          <input class="carousel__activator" type="radio" name="carousel0" id="0g">
+        
+          <input class="carousel__activator" type="radio" name="carousel0" id="0h">
+        
         
           
           
           
           
           <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="0f"></label>
+              <label class="carousel__control carousel__control--backward" for="0h"></label>
               <label class="carousel__control carousel__control--forward" for="0b"></label>
           </div>
         
@@ -507,6 +511,24 @@
           
           <div class="carousel__controls">
               <label class="carousel__control carousel__control--backward" for="0e"></label>
+              <label class="carousel__control carousel__control--forward" for="0g"></label>
+          </div>
+        
+          
+          
+          
+          
+          <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="0f"></label>
+              <label class="carousel__control carousel__control--forward" for="0h"></label>
+          </div>
+        
+          
+          
+          
+          
+          <div class="carousel__controls">
+              <label class="carousel__control carousel__control--backward" for="0g"></label>
               <label class="carousel__control carousel__control--forward" for="0a"></label>
           </div>
         
@@ -530,6 +552,12 @@
             </li>
 <li class="carousel__slide" style="background-image: url('images/radar_tripod_crop.jpg');">
             
+            </li>
+<li class="carousel__slide" style="background-image: url('images/summer_2025_testing.jpg');">
+            
+            </li>
+<li class="carousel__slide" style="background-image: url('images/summer_2025_testing_2.jpg');">
+            
           </li>
 </ul>
         </div>
@@ -546,6 +574,10 @@
               <label class="carousel__indicator" for="0e"></label>
             
               <label class="carousel__indicator" for="0f"></label>
+            
+              <label class="carousel__indicator" for="0g"></label>
+            
+              <label class="carousel__indicator" for="0h"></label>
             
         </div>
     </div>
@@ -704,6 +736,52 @@
   opacity: 1;
 }
 
+.carousel__activator:nth-of-type(7):checked ~ .carousel__track {
+  -webkit-transform: translateX(-600%);
+          transform: translateX(-600%);
+}
+.carousel__activator:nth-of-type(7):checked ~ .carousel__slide:nth-of-type(7) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.carousel__activator:nth-of-type(7):checked ~ .carousel__controls:nth-of-type(7) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(7):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(7) {
+  opacity: 1;
+}
+
+.carousel__activator:nth-of-type(8):checked ~ .carousel__track {
+  -webkit-transform: translateX(-700%);
+          transform: translateX(-700%);
+}
+.carousel__activator:nth-of-type(8):checked ~ .carousel__slide:nth-of-type(8) {
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.carousel__activator:nth-of-type(8):checked ~ .carousel__controls:nth-of-type(8) {
+  display: block;
+  opacity: 1;
+}
+.carousel__activator:nth-of-type(8):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(8) {
+  opacity: 1;
+}
+
 
 .carousel__control {
   height: 30px;
@@ -803,6 +881,16 @@
           transform: translateX(500%);
 }
 
+.carousel__track .carousel__slide:nth-of-type(7) {
+  -webkit-transform: translateX(600%);
+          transform: translateX(600%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(8) {
+  -webkit-transform: translateX(700%);
+          transform: translateX(700%);
+}
+
 
 .carousel--scale .carousel__slide {
   -webkit-transform: scale(0);
@@ -855,6 +943,18 @@
 
 .carousel__slide:nth-of-type(6),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(6) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(7),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(7) {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(8),
+.carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(8) {
   background-size: cover;
   background-position: center;
 }
@@ -939,7 +1039,7 @@
 </div>
 
 <div class="feature" data-flip="">
-  <a href="/HI-SNR.github.io/projects" class="feature-image" aria-label="Biosphere Radars">
+  <a href="/HI-SNR.github.io/research" class="feature-image" aria-label="Biosphere Radars">
     <img src="/HI-SNR.github.io/images/tree_radar.gif" loading="lazy" alt="Biosphere Radars" onerror="this.src = '/HI-SNR.github.io/images/fallback.svg'; this.onerror = null;">
   </a>
   <div class="feature-text">
@@ -950,7 +1050,7 @@
 <p>We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health.</p>
 
 <div class="button-wrapper">
-    <a class="button" href="/HI-SNR.github.io/projects" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
+    <a class="button" href="/HI-SNR.github.io/research" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
       <i class="icon fa-solid fa-arrow-right"></i>
       
         <span>See our publications</span>
@@ -963,7 +1063,7 @@
 </div>
 
 <div class="feature">
-  <a href="/HI-SNR.github.io/team" class="feature-image" aria-label="Near Subsurface Radar">
+  <a href="/HI-SNR.github.io/research" class="feature-image" aria-label="Near Subsurface Radar">
     <img src="/HI-SNR.github.io/images/drone_ani.gif" loading="lazy" alt="Near Subsurface Radar" onerror="this.src = '/HI-SNR.github.io/images/fallback.svg'; this.onerror = null;">
   </a>
   <div class="feature-text">
@@ -971,10 +1071,10 @@
       <p class="feature-title">Near Subsurface Radar</p>
     
     
-<p>We are creating new methods of monitoring our limitted resources including drone-based soil moisture estimation and satellite-based aquifer volume retreivals.</p>
+<p>We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.</p>
 
 <div class="button-wrapper">
-    <a class="button" href="/HI-SNR.github.io/team" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
+    <a class="button" href="/HI-SNR.github.io/research" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
       <i class="icon fa-solid fa-arrow-right"></i>
       
         <span>See our publications</span>
@@ -987,7 +1087,7 @@
 </div>
 
 <div class="feature" data-flip="">
-  <a href="/HI-SNR.github.io/projects" class="feature-image" aria-label="Computational Photography">
+  <a href="/HI-SNR.github.io/research" class="feature-image" aria-label="Computational Photography">
     <img src="/HI-SNR.github.io/images/camera_testing.jpg" loading="lazy" alt="Computational Photography" onerror="this.src = '/HI-SNR.github.io/images/fallback.svg'; this.onerror = null;">
   </a>
   <div class="feature-text">
@@ -998,7 +1098,7 @@
 <p>We develop imaging algorithms not only for radar, but also for cameras. We focus on equitable imaging and develop methods that ensure beautiful, crisp images for all users.</p>
 
 <div class="button-wrapper">
-    <a class="button" href="/HI-SNR.github.io/projects" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
+    <a class="button" href="/HI-SNR.github.io/research" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
       <i class="icon fa-solid fa-arrow-right"></i>
       
         <span>See our publications</span>
