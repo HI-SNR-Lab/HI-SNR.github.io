@@ -1,29 +1,31 @@
 ---
 carousels:
   - images:
+    - image: images/connecting_apres.jpg
+    - image: images/camera_testing.jpg
+    - image: images/Yang_Testing.jpg
     - image: images/students.jpg
     - image: images/ravine.jpg
-    - image: images/connecting_apres.jpg
     - image: images/Tents.jpg
     - image: images/testing_with_Neo.jpg
     - image: images/radar_tripod_crop.jpg
     - image: images/summer_2025_testing.jpg
-    - image: images/summer_2025_testing_2.jpg
 ---
 
-#  At the High precision Imaging, Signals N Radar HI SNR Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
+#  Computational Imaging in Photography and Environmental Radar
 
 {% include carousel.html height="50" unit="%" duration="5" number="1" %}
 
 {% include section.html %}
+#  At the High precision Imaging, Signals N Radar HI SNR Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
 
 ## Research Areas
 
 {% capture text %}
 
-We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions.
+We are inventing radars, signal processing algorithms, and data assimilation techniques to measure the environment at scales previously unexplored. Our systems are deployed to improve geophysical understanding of the earth and to aid in resource management. We have developed systems that inform predictions for sea level rise and wildfire risk, as well as monitoring ecosystem and agricultural health.
 
-{%
+{% 
   include button.html
   link="research"
   text="See our publications"
@@ -44,55 +46,7 @@ We are inventing radar techniques to measure ice properties at scales previously
 
 {% capture text %}
 
-We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health.
-
-{%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/tree_radar.gif"
-  link="research"
-  title="Biosphere Radars"
-  flip=true
-  style="bare"
-  text=text
-%}
-
-{% capture text %}
-
-We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.
-
-{%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/drone_ani.gif"
-  link="research"
-  title="Near Subsurface Radar"
-  text=text
-%}
-
-{% capture text %}
-
-We develop imaging algorithms not only for radar, but also for cameras. We focus on equitable imaging and develop methods that ensure beautiful, crisp images for all users. 
+We develop imaging and data assimilation algorithms not only for radar, but also for cameras. We develop equitable imaging algorithms that ensure beautiful, crisp images for all users. We also research 3D reconstruction methods, and compressive sensing. 
 
 
 {%

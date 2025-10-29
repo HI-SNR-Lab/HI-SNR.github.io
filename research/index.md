@@ -22,12 +22,166 @@ We develop multistatic radars and algorithms for retreiving properties of the en
 <details close>
 <summary>2. Computational Photography</summary>
 <br>
-We develop computational photography algorithms that improve image quality and make camera performance more equitable.
+We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data.
 </details>
 
 
 
 {% include section.html %}
+## Research Areas in Computational Photography
+
+{% capture text %}
+
+We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. 
+
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/photography.jpg"
+  link="research"
+  title="Equitable Imaging"
+  flip=true
+  style="bare"
+  text=text
+%}
+
+{% capture text %}
+
+We research human behavioral processes that influence subjective interpretation of image quality and integrate findings from these studies into improved imaging algorithms.
+
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/people_in_photo.jpg"
+  link="research"
+  title="Behavioral Studies for Improved Imaging"
+  flip=true
+  style="bare"
+  text=text
+%}
+
+{% capture text %}
+
+We develop imaging methods and rendering algorithms for reconstructing 3D images from reduced dimensionality data.
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/compressive_sensing.jpg"
+  link="research"
+  title="Compressive Sensing"
+  flip=true
+  style="bare"
+  text=text
+%}
+
+
+## Research Areas in Environmental Radar
+
+{% capture text %}
+
+We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions.
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/approachingradar.jpg"
+  link="research"
+  title="Cryosphere Radars"
+  text=text
+%}
+
+{% capture text %}
+
+We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health.
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/tree_radar.gif"
+  link="research"
+  title="Biosphere Radars"
+  flip=true
+  style="bare"
+  text=text
+%}
+
+{% capture text %}
+
+We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.
+
+{%
+  include button.html
+  link="research"
+  text="See our publications"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/drone_ani.gif"
+  link="research"
+  title="Near Subsurface Radar"
+  text=text
+%}
+
+
 
 ## Highlighted
 
