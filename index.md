@@ -40,7 +40,7 @@ We are inventing radars, signal processing algorithms, and data assimilation tec
   include feature.html
   image="images/approachingradar.jpg"
   link="research"
-  title="Cryosphere Radars"
+  title="Environmental Radar"
   text=text
 %}
 

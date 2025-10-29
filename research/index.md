@@ -99,7 +99,7 @@ We develop imaging methods and rendering algorithms for reconstructing 3D images
 
 {%
   include feature.html
-  image="images/compressive_sensing.jpg"
+  image="images/compressive_sensing.png"
   link="research"
   title="Compressive Sensing"
   flip=true
