@@ -15,12 +15,12 @@ At HI-SNR Lab, we are dedicated to open science. We believe that sharing our cod
 
 {% include section.html %}
 
-## Featured
+<!--- ## Featured ---> 
 
-{% include list.html component="card" data="projects" filters="group: featured" %}
+<!--- {% include list.html component="card" data="projects" filters="group: featured" %} ---> 
 
-{% include section.html %}
+<!--- {% include section.html %} ---> 
 
-## More
+<!--- ## More ---> 
 
-{% include list.html component="card" data="projects" filters="group: " style="small" %}
+<!--- {% include list.html component="card" data="projects" filters="group: " style="small" %} ---> 
