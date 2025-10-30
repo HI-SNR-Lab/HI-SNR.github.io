@@ -13,6 +13,7 @@ carousels:
 ---
 
 #  Computational Imaging in Photography and Environmental Radar
+Compressed Sensing :small_blue_diamond: Data Fusion :small_blue_diamond: Signal Processing :small_blue_diamond: Adaptive Algorithms :small_blue_diamond: Data Assimilation
 
 {% include carousel.html height="50" unit="%" duration="5" number="1" %}
 
@@ -20,6 +21,7 @@ carousels:
 #  At the High precision Imaging, Signals N Radar HI SNR Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
 
 ## Research Areas
+We develop imaging methods, including compressed sensing, data fusion, signal processing, data assimilation, and adaptive algorithms for both camera and radar applications. In both areas, a core focus is image formation with incomplete data. 
 
 {% capture text %}
 
@@ -46,7 +48,7 @@ We are inventing radars, signal processing algorithms, and data assimilation tec
 
 {% capture text %}
 
-We develop imaging and data assimilation algorithms not only for radar, but also for cameras. We develop equitable imaging algorithms that ensure beautiful, crisp images for all users. We also research 3D reconstruction methods, and compressive sensing. 
+We are developing signal processing algorithms, data fusion methods, compressed sensing, and adaptive algorithms to form beautiful photos and renderings that represent our lives. Our algorithms have been used in equitable imaging algorithms that ensure beautiful, crisp images for all users. We are developing compressive sensing methods for reduced cost 3D imaging for medical applications.
 
 
 {%
