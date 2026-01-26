@@ -1,5 +1,68 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.1017/jog.2025.10114
+  title: Polarimetric multi-offset radio-echo sounding with a radio frequency-over-fiber
+    ApRES system
+  authors:
+  - Daniel F. May
+  - Dustin M. Schroeder
+  - Paul T. Summers
+  - Thomas O. Teisberg
+  - Anna L. Broome
+  - Nicole L. Bienert
+  - Jaiden Zak
+  - Tun Jan Young
+  - Marianne S. Karplus
+  - Slawek M. Tulaczyk
+  publisher: Journal of Glaciology
+  date: '2025-12-12'
+  link: https://doi.org/hbmczn
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1029/2024RG000842
+  title: 'Radar Polarimetry in Glaciology: Theory, Measurement Techniques, and Scientific
+    Applications for Investigating the Anisotropy of Ice Masses'
+  authors:
+  - Benjamin H. Hills
+  - T. J. Young
+  - David A. Lilien
+  - Esther Babcock
+  - Nicole Bienert
+  - Donald Blankenship
+  - John Bradford
+  - Giancorrado Brighi
+  - Alex Brisbourne
+  - "J\xF8rgen Dall"
+  - Reinhard Drews
+  - Olaf Eisen
+  - M. Reza Ershadi
+  - Tamara A. Gerber
+  - Nicholas Holschuh
+  - Daniela Jansen
+  - Thomas M. Jordan
+  - Nanna B. Karlsson
+  - Jilu Li
+  - "Carlos Mart\xEDn"
+  - Kenichi Matsuoka
+  - Daniel May
+  - Falk M. Oraschewski
+  - John Paden
+  - Nicholas M. Rathmann
+  - Neil Ross
+  - Dustin M. Schroeder
+  - Martin Siegert
+  - Matthew R. Siegfried
+  - Emma Smith
+  - Ole Zeising
+  publisher: Reviews of Geophysics
+  date: '2025-11-02'
+  link: https://doi.org/g99tx6
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
 - id: doi:10.1109/igarss53475.2024.10640578
   title: A Concept For Multistatic Radar Tomography Of Crop Root Zone Soil Moisture
   authors:
