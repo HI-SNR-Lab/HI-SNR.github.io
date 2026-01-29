@@ -1,0 +1,11 @@
+name: hisnrlab
+
+services:
+  server:
+    image: .docker:image_v1
+    container_name: hisnr_website
+    command: hugo server --bind 0.0.0.0
+    volumes:
+      - $PWD:/src
+    ports:
+      - 1313:1313
