@@ -18,7 +18,7 @@ non-zero number of logged errors but no time offset messages), the time offset i
 estimated based on the starting and ending system clock, rounded to the nearest
 multiple of <code>pulse_rep_int</code>.</div><h2 id=timestamping-samples>Timestamping samples</h2><p>ORCA currently assumes that the SDR clock is useful to relative timing only and
 relies on the <em>host computer</em> clock to provide a starting timestamp. When using
-the <a href=https://hisnr.com/orca/docs/radar/sdr-interface/code/#runner-scripts>run.py interface</a>,
+the <a href=https://hisnr.com/orca/docs/radar/pi-sd-setup/code/#runner-scripts>run.py interface</a>,
 <code>stdout</code> output is logged with a Unix timestamp from the host computer. The
 timestamp on the starting message (plus any specified <code>time_offset</code> in the config
 file) is used to provide the absolute time of the first transmission.</p><p>This relies upon the system clock being set accurately and should never be assumed
