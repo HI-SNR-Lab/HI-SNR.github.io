@@ -1,27 +1,14 @@
-# For when updating changing in Docker
-# name: hisnrlab
-# services:
-#   server:
-#     build:
-#       context: .
-#       dockerfile: .docker/Dockerfile
-#     image: docker:image_v1
-#     container_name: hisnr_website
-#     volumes:
-#       - .:/usr/src/app
-#     ports:
-#       - "4000:4000"
-#       - "35729:35729"
-#     command: bundle exec jekyll serve --host 0.0.0.0 --livereload  # <--- FORCE BINDING HERE
-
 name: hisnrlab
-
 services:
   server:
-    image: .docker:image_v1
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    image: docker:image_v1
     container_name: hisnr_website
-    command: hugo server --bind 0.0.0.0
     volumes:
-      - $PWD:/src
+      - .:/usr/src/app
     ports:
-      - 1313:1313
+      - "4000:4000"
+      - "35729:35729"
+    command: bundle exec jekyll serve --host 0.0.0.0 --livereload
