@@ -437,8 +437,109 @@
   
   
 
-  <section class="background" data-size="page">
-    <h1 id="team">
+  <section class="background" data-size="page" style="--image: url('/#ddddee')">
+    <style>
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+h1, h2 {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.section-divider {
+  margin: 4px 0 !important;
+  padding: 4;
+}
+
+.section-pi {
+  display: flex;
+  margin-left: 4px 0 !important;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0px 0;
+  background: #eef2ff
+}
+
+.section-grad {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #ddddee;
+}
+
+.section-undergrad {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #eef1ff;
+}
+
+.section-alumni {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #ddddee;
+}
+
+.section-past {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #eef2ff;
+}
+
+/* .section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 30px 0;
+} */
+</style>
+
+<h1 id="team">
 <i class="icon fa-solid fa-users"></i>Team</h1>
 
 <p>At HI-SNR Lab, we believe that a joyful and inclusive environment drives innovation. Our team is dedicated to collaboration and creativity, celebrating our differences, and supporting one another. Join us on our journey to bring new imaging systems and methods to our communities!</p>
@@ -455,11 +556,39 @@
   size: ;
 -->
 
+<div class="section section-pi"> 
+  <div class="inner"> 
+    <h2 class="section-title">Principal Investigator</h2>
+    <div class="team-grid">
+                         
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
 <div class="portrait-wrapper">
   <a href="/members/nicole-bienert.html" class="portrait" data-style="" aria-label="Nicole Bienert">
-    
+    <!-- 
       <i class="icon fa-solid fa-microscope"></i>
-    
+     -->
 
     <img src="/images/members/Nicole_Bienert_2024.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -482,54 +611,43 @@
     
   </a>
 </div>
-
-<div class="portrait-wrapper">
-  <a href="/members/Austin-vera.html" class="portrait" data-style="" aria-label="Austin Vera">
-    
-
-    <img src="/images/members/austin_vera.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Austin Vera
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Undergraduate Research Assistant
-      </span>
-    
-
-    
-  </a>
+ </div>
+               
+    </div>
+  </div> 
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/carson-anderson.html" class="portrait" data-style="" aria-label="Carson Anderson">
-    
+<div class="section section-grad"> 
+  <div class="inner"> 
+    <h2 class="section-title">Graduate Students</h2>
+    <div class="team-grid">
+           
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
 
-    <img src="/images/members/carson_anderson.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
 
-    
-      <span class="portrait-name">
-        Carson Anderson
-      </span>
-    
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
 
-    
-      <span class="portrait-description">
-        Graduate Student Researcher
-      </span>
-    
 
-    
-  </a>
-</div>
+
+
 
 <div class="portrait-wrapper">
   <a href="/members/christopher-barbarie.html" class="portrait" data-style="" aria-label="Christopher Barbarie">
-    
+    <!--  -->
 
     <img src="/images/members/Christopher_Barbarie.JPG" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -541,17 +659,144 @@
 
     
       <span class="portrait-description">
-        Graduate Student Researcher
+        Ph.D. Student
       </span>
     
 
     
   </a>
 </div>
+ </div>
+                      
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/olivia-egbert.html" class="portrait" data-style="" aria-label="Olivia Egbert">
+    <!--  -->
+
+    <img src="/images/members/Olivia_Egbert.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Olivia Egbert
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Masters Student
+      </span>
+    
+
+    
+  </a>
+</div>
+ </div>
+          
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/zoe-worrall.html" class="portrait" data-style="" aria-label="Zoe Worrall">
+    <!--  -->
+
+    <img src="/images/members/zoe_worrall.JPG" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Zoe Worrall
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Ph.D. Student
+      </span>
+    
+
+    
+  </a>
+</div>
+ </div>
+         
+    </div>
+  </div> 
+</div>
+
+<div class="section section-undergrad"> 
+  <div class="inner"> 
+    <h2 class="section-title">Undergraduate Students</h2>
+    <div class="team-grid">
+             
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
 
 <div class="portrait-wrapper">
   <a href="/members/colin-chow.html" class="portrait" data-style="" aria-label="Colin Chow">
-    
+    <!-- 
+      <i class="icon fa-solid fa-user-graduate"></i>
+     -->
 
     <img src="/images/members/Colin_Chow.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -570,32 +815,36 @@
     
   </a>
 </div>
+ </div>
+          
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
 
-<div class="portrait-wrapper">
-  <a href="/members/dhruva-anantha-datta.html" class="portrait" data-style="" aria-label="Dhruva Anantha Datta">
-    
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
 
-    <img src="/images/members/Dhruva_Ananth_Datta.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
 
-    
-      <span class="portrait-name">
-        Dhruva Anantha Datta
-      </span>
-    
 
-    
-      <span class="portrait-description">
-        Graduate Student Researcher
-      </span>
-    
 
-    
-  </a>
-</div>
+
 
 <div class="portrait-wrapper">
   <a href="/members/edie-goldner.html" class="portrait" data-style="" aria-label="Edie Goldner">
-    
+    <!-- 
+      <i class="icon fa-solid fa-user-graduate"></i>
+     -->
 
     <img src="/images/members/Edie_Goldner.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -614,10 +863,190 @@
     
   </a>
 </div>
+ </div>
+                       
+    </div>
+  </div> 
+</div>
+
+<div class="section section-alumni"> 
+  <div class="inner"> 
+    <h2 class="section-title">Alumni</h2>
+    <div class="team-grid">
+         
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/carson-anderson.html" class="portrait" data-style="" aria-label="Carson Anderson">
+    <!--  -->
+
+    <img src="/images/members/carson_anderson.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Carson Anderson
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Masters Student
+      </span>
+    
+
+    
+  </a>
+</div>
+ </div>
+                               
+    </div>
+  </div> 
+</div>
+
+<div class="section section-past"> 
+  <div class="inner"> 
+    <h2 class="section-title">Past Students</h2>
+    <div class="team-grid">
+       
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Austin-vera.html" class="portrait" data-style="" aria-label="Austin Vera">
+    <!--  -->
+
+    <img src="/images/members/austin_vera.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Austin Vera
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Undergraduate Research Assistant
+      </span>
+    
+
+    
+  </a>
+</div>
+ </div>
+              
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/dhruva-anantha-datta.html" class="portrait" data-style="" aria-label="Dhruva Anantha Datta">
+    <!--  -->
+
+    <img src="/images/members/Dhruva_Ananth_Datta.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        Dhruva Anantha Datta
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Masters Student
+      </span>
+    
+
+    
+  </a>
+</div>
+ </div>
+          
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
 
 <div class="portrait-wrapper">
   <a href="/members/eric-gosnell.html" class="portrait" data-style="" aria-label="Eric Gosnell">
-    
+    <!--  -->
 
     <img src="/images/members/Eric_Gosnell.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -636,10 +1065,34 @@
     
   </a>
 </div>
+ </div>
+        
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
 
 <div class="portrait-wrapper">
   <a href="/members/irati-ortuondo.html" class="portrait" data-style="" aria-label="Irati Ortuondo">
-    
+    <!--  -->
 
     <img src="/images/members/Irati_Ortuondo.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -651,17 +1104,41 @@
 
     
       <span class="portrait-description">
-        Undergraduate Researcher
+        Undergraduate Student Researcher
       </span>
     
 
     
   </a>
 </div>
+ </div>
+        
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+
+
+
 
 <div class="portrait-wrapper">
   <a href="/members/liza-gunther.html" class="portrait" data-style="" aria-label="Liza Gunther">
-    
+    <!--  -->
 
     <img src="/images/members/Liza_Gunther.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -673,39 +1150,41 @@
 
     
       <span class="portrait-description">
-        Graduate Student Researcher
+        Masters Student
       </span>
     
 
     
   </a>
 </div>
+ </div>
+            
+        <div class="team-member"> <style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
 
-<div class="portrait-wrapper">
-  <a href="/members/olivia-egbert.html" class="portrait" data-style="" aria-label="Olivia Egbert">
-    
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
 
-    <img src="/images/members/Olivia_Egbert.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
 
-    
-      <span class="portrait-name">
-        Olivia Egbert
-      </span>
-    
 
-    
-      <span class="portrait-description">
-        Graduate Student Researcher
-      </span>
-    
 
-    
-  </a>
-</div>
+
 
 <div class="portrait-wrapper">
   <a href="/members/piper-morison.html" class="portrait" data-style="" aria-label="Piper Morison">
-    
+    <!--  -->
 
     <img src="/images/members/Piper_Morison.JPG" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
@@ -724,27 +1203,10 @@
     
   </a>
 </div>
-
-<div class="portrait-wrapper">
-  <a href="/members/zoe-worrall.html" class="portrait" data-style="" aria-label="Zoe Worrall">
-    
-
-    <img src="/images/members/zoe_worrall.JPG" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Zoe Worrall
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student Researcher
-      </span>
-    
-
-    
-  </a>
+ </div>
+           
+    </div>
+  </div> 
 </div>
   </section>
 
