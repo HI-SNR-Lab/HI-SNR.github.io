@@ -12,16 +12,72 @@ carousels:
     - image: images/summer_2025_testing.jpg
 ---
 
-#  Computational Imaging in Photography and Environmental Radar
-Compressed Sensing :small_blue_diamond: Data Fusion :small_blue_diamond: Signal Processing :small_blue_diamond: Adaptive Algorithms :small_blue_diamond: Data Assimilation
+<style>
+.epic-title {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #ddddee;
+}
+
+.intro-description {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+
+  padding: 10px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-orca {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  padding: 20px 80px;
+  box-sizing: border-box;
+
+  align-items: flex-start;
+  text-align: left;
+
+  background: #ddddee;
+}
+</style>
+
+<h1 style="font-size: 40px;"><b>Computational Imaging in Photography and Environmental Radar</b></h1>
+
+
+<div class="intro-description">
+    <h5 style="text-align: center;"><i>Compressed Sensing :small_blue_diamond: Data Fusion :small_blue_diamond: Signal Processing :small_blue_diamond: Adaptive Algorithms :small_blue_diamond: Data Assimilation </i></h5>
+</div>
 
 {% include carousel.html height="50" unit="%" duration="5" number="1" %}
 
 {% include section.html %}
-#  At the High precision Imaging, Signals N Radar HI SNR Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. 
+
+<div class="epic-title">
+    <h2 style="text-align: center;">At the High precision Imaging, Signals 'N Radar Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible. </h2>
+</div>
+
+
 
 ## Research Areas
-We develop imaging methods, including compressed sensing, data fusion, signal processing, data assimilation, and adaptive algorithms for both camera and radar applications. In both areas, a core focus is image formation with incomplete data. 
+We develop imaging methods, including compressed sensing, data fusion, signal processing, data assimilation, and adaptive algorithms for both camera and radar applications. In both areas, a core focus is image formation with incomplete data.
 
 {% capture text %}
 
@@ -71,3 +127,16 @@ We are developing signal processing algorithms, data fusion methods, compressed 
   style="bare"
   text=text
 %}
+
+
+{% include section.html %}
+
+<div class="epic-title">
+{%
+  include button.html
+  link="orca"
+  text=" <h1>Documentation on Open Code Radar Architecture (ORCA)</h1>"
+  style="bare"
+  background="#ddddee"
+%}
+</div>
