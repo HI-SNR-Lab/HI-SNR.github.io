@@ -1,7 +1,7 @@
 ---
 name: Piper Morison
 image: images/members/Piper_Morison.JPG
-role: Student
+role: past
 description: Undergraduate Student Researcher
 
 ---

@@ -16,3 +16,4 @@ yarn.lock
 node_modules
 pyproject.toml
 poetry.lock
+_cite/.cache/cache.db

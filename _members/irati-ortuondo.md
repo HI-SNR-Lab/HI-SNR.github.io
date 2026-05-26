@@ -1,8 +1,8 @@
 ---
 name: Irati Ortuondo
 image: images/members/Irati_Ortuondo.jpg
-description: Undergraduate Researcher
-role: Student
+description: Undergraduate Student Researcher
+role: past
 ---
 
 Irati Ortuondo is a final-year Telecommunications Engineering student working on her bachelor’s thesis in the Hi-SNR lab. Her research focuses on combining radiometer and radar measurements to improve the estimation of vegetation water content and enhance the monitoring of wildfires.

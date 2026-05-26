@@ -1,8 +1,8 @@
 ---
 name: Carson Anderson
 image: images/members/carson_anderson.png
-description: Graduate Student Researcher
-role: Student
+description: Masters Student
+role: alumni
 ---
 
 Carson Anderson is a Master’s student at CU Boulder and a new member of the HI-SNR Lab, where he will be working on Synthetic Aperture Radar (SAR) analysis, exploitation, and change detection. His academic interests include remote sensing, SAR image processing, and machine learning for geospatial applications.

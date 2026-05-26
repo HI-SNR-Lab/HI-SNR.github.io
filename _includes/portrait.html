@@ -1,3 +1,22 @@
+<style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
 {% if include.lookup %}
   {% assign member = site.members 
     | where_exp: "member", "member.slug == include.lookup"
@@ -18,9 +37,9 @@
     data-style="{{ include.style }}"
     aria-label="{{ member.name | default: "member link" }}"
   >
-    {% if type %}
+    <!-- {% if type %}
       {% include icon.html icon=type.icon %}
-    {% endif %}
+    {% endif %} -->
 
     <img
       src="{{ member.image | relative_url }}"

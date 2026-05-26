@@ -1,7 +1,7 @@
 ---
 name: Colin Chow
 image: images/members/Colin_Chow.jpg
-role: Student
+role: undergrad
 description: Undergraduate Student Researcher
 ---
 

@@ -1,8 +1,8 @@
 ---
 name: Dhruva Anantha Datta
 image: images/members/Dhruva_Ananth_Datta.jpg
-description: Graduate Student Researcher
-role: Student
+description: Masters Student
+role: past
 
 links:
   home-page: https://www.dhruva-ananth.com/

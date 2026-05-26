@@ -2,7 +2,7 @@
 name: Eric Gosnell
 image: images/members/Eric_Gosnell.jpg
 description: Undergraduate Student Researcher
-role: Student
+role: past
 
 links:
     home-page: https://ericgosnell.github.io/
