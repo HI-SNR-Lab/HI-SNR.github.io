@@ -1,0 +1,27 @@
+<figure class="figure">
+  {{- if .Link }}
+  <a href="{{ .Link | relURL }}" class="figure-image" aria-label="{{ default "figure link" .Caption }}">
+  {{- else }}
+  <span class="figure-image" aria-label="{{ default "figure link" .Caption }}">
+  {{- end }}
+
+    <img
+      src="{{ .Image | relURL }}"
+      style="width: {{ default "auto" .Width }}; max-height: {{ default "unset" .Height }};"
+      alt="{{ default "figure image" .Caption }}"
+      loading="lazy"
+      {{ partial "image_onerror.go" . }}
+    >
+
+  {{- if .Link }}
+  </a>
+  {{- else }}
+  </span>
+  {{- end }}
+
+  {{- if .Caption }}
+  <figcaption class="figure-caption">
+    {{ .Caption }}
+  </figcaption>
+  {{- end }}
+</figure>

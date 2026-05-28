@@ -1,0 +1,129 @@
+{{- /* 1. Handle Background Image Assignment with Site/Page fallbacks */ -}}
+{{- $backgroundImage := .Params.header | default site.Params.header | relURL -}}
+
+{{- /* 2. Handle Dark Mode Logic */ -}}
+{{- $dark := true -}}
+{{- if (index .Params "header-dark") -}}
+  {{- $dark = .Params.Header_dark -}}
+{{- else if (index .Params "header-dark") -}}
+  {{- $dark = site.Params.Header_dark -}}
+{{- end -}}
+
+{{- /* 3. Handle Separate Dynamic Logo Image Checks */ -}}
+{{- $svg := fileExists "static/images/logo.svg" -}}
+{{- $png := fileExists "static/images/logo.png" -}}
+{{- $jpg := fileExists "static/images/logo.jpg" -}}
+
+{{- $logo := "" -}}
+{{- if $svg }}{{ $logo = "images/logo.svg" -}}
+{{- else if $png }}{{ $logo = "images/logo.png" -}}
+{{- else if $jpg }}{{ $logo = "images/logo.jpg" -}}
+{{- end -}}
+
+<header
+  class="background site-header"
+  style="--image: url('{{ $backgroundImage }}')"
+  data-dark="{{ $dark }}"
+  {{ if eq .RelPermalink "/" }}data-big{{ end }}
+>
+  <a href="{{ "/" | relURL }}" class="home">
+    
+    <!-- IMAGE 2: The Tiny Logo Layout Frame -->
+    {{- if $logo }}
+      <span class="logo">
+        {{- if $svg }}
+          <!-- Render raw SVG if logo.svg exists -->
+          <span class="inline-svg-logo">
+            {{ (os.ReadFile "static/images/logo.svg") | safeHTML }}
+          </span>
+        {{- else }}
+          <!-- Render image if logo.png or logo.jpg exists -->
+          <img src="{{ $logo | relURL }}" alt="logo" class="tiny-site-logo">
+        {{- end }}
+      </span>
+    {{- end }}
+    
+    {{- if ne site.Params.logo_text false }}
+      <span class="title-text" data-tooltip="Home" style="display: flex; flex-direction: column; justify-content: center;">
+        {{- if and site.Title (ne site.Params.show_title false) }}
+          <span class="title" style="font-family: var(--title), 'Barlow', sans-serif; font-weight: var(--bold, 600); font-size: 1.5rem; color: var(--text); line-height: 1.2;">
+            {{ site.Title }}
+          </span>
+        {{- end }}
+        {{- if and site.Params.subtitle (ne site.Params.show_subtitle false) }}
+          <span class="subtitle" style="font-family: var(--body), 'Barlow', sans-serif; font-weight: var(--regular, 400); font-size: 0.9rem; color: var(--gray); line-height: 1.2; margin-top: 2px;">
+            {{ site.Params.subtitle }}
+          </span>
+        {{- end }}
+      </span>
+    {{- end }}
+  </a>
+
+  <nav class="nav-menu">
+    <ul>
+      {{- $navPages := where site.AllPages "Params.nav" "!=" nil -}}
+      {{- range $navPages.ByParam "nav.order" }}
+        <li class="nav-item">
+          <a href="{{ .RelPermalink }}" data-tooltip="{{ .Params.nav.tooltip }}">
+            {{ .Title }}
+          </a>
+        </li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>
+
+<style>
+/* 
+  IMAGE 1: The full-width top background image strip.
+  These properties force the background to remain thin along the top edge.
+*/
+header.site-header {
+  width: 100% !important;
+  background-image: var(--image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  
+  /* Hard limit the thickness of the top background strip */
+  min-height: 120px !important; 
+  height: 120px !important;
+  
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 40px !important;
+  box-sizing: border-box !important;
+}
+
+/* If the homepage uses data-big, allow it to be slightly taller, but not screen-filling */
+header.site-header[data-big] {
+  min-height: 180px !important;
+  height: 180px !important;
+}
+
+/* Align navigation elements cleanly inside the layout header bar */
+header.site-header .home {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  gap: 15px !important;
+}
+
+/* 
+  IMAGE 2 STYLE: Force the separate logo image/SVG 
+  to stay tiny inside the upper left corner 
+*/
+.tiny-site-logo {
+  height: 40px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.inline-svg-logo svg {
+  height: 40px !important;
+  width: auto !important;
+  display: block !important;
+}
+</style>

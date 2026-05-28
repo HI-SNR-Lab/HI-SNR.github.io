@@ -1,0 +1,20 @@
+<div class="feature" {{ if eq .flip true }}data-flip="true"{{ end }}>
+  <a
+    {{ if .Link }}href="{{ .Link | relURL }}"{{ end }}
+    class="feature-image"
+    aria-label="{{ if .Title }}{{ .Title }}{{ else }}feature link{{ end }}"
+  >
+    <img
+      src="{{ .Image | relURL }}"
+      loading="lazy"
+      alt="{{ if .Title }}{{ .Title }}{{ else }}feature image{{ end }}"
+    >
+  </a>
+
+  <div class="feature-text">
+    {{ if .Title }}
+      <p class="feature-title">{{ .Title }}</p>
+    {{ end }}
+    {{ .Text }}
+  </div>
+</div>

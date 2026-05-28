@@ -1,0 +1,92 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{- $dataName := .data | default "citations" -}}
+{{- $pageContext := .context -}}
+{{- $citations := index $pageContext.Site.Data $dataName -}}
+
+<div class="citations-list-wrapper">
+  <div class="citations-list" id="publications-target-list">
+    {{- if $citations }}
+      {{- range $index, $item := $citations }}
+        <!-- We lower-case all text variables into a searchable data pool -->
+        <div class="citation-item-card" 
+             data-search-pool="{{ lower $item.title }} {{ lower $item.authors }} {{ lower $item.journal }} {{ lower $item.year }}"
+             style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          
+          {{- if $item.title }}
+            <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+              <strong><a href="{{ $item.url | default "#" }}" style="text-decoration: none; color: #0056b3;">{{ $item.title }}</a></strong>
+            </p>
+          {{- end }}
+
+          {{- if $item.authors }}
+            <p style="margin: 0 0 5px 0; font-size: 0.95rem; color: #444; font-style: italic;">{{ $item.authors }}</p>
+          {{- end }}
+
+          {{- if $item.journal }}
+            <p style="margin: 0; font-size: 0.9rem; color: #666;">
+              <span>{{ $item.journal }}</span>
+              {{- if $item.year }} <span><strong>({{ $item.year }})</strong></span>{{ end -}}
+            </p>
+          {{- end }}
+
+        </div>
+      {{- end }}
+    {{- end }}
+  </div>
+</div>
+
+<!-- HIGH PERFORMANCE CLIENT-SIDE ENGINE WRAPPER -->
+<script>
+var siteSearchInput = document.getElementById("site-search-input");
+var siteSearchClearBtn = document.getElementById("site-search-clear-btn");
+var siteSearchCounter = document.getElementById("site-search-counter-text");
+var citationCards = document.querySelectorAll("#publications-target-list .citation-item-card");
+
+function updateSearchInfo(query, count) {
+  if (!siteSearchCounter) return;
+  if (query === "") {
+    siteSearchCounter.textContent = "Showing all " + citationCards.length + " items";
+    if (siteSearchClearBtn) siteSearchClearBtn.disabled = true;
+  } else {
+    siteSearchCounter.textContent = "Found " + count + " matching results out of " + citationCards.length + " items";
+    if (siteSearchClearBtn) siteSearchClearBtn.disabled = false;
+  }
+}
+
+// Initial count calculation on page load
+if (citationCards.length > 0) {
+  updateSearchInfo("", citationCards.length);
+}
+
+// Global hook matching your search box oninput attribute
+function onSearchInput(inputElement) {
+  var query = inputElement.value.toLowerCase().trim();
+  var matchCount = 0;
+
+  citationCards.forEach(function(card) {
+    var pool = card.getAttribute("data-search-pool") || "";
+    if (query === "" || pool.indexOf(query) !== -1) {
+      card.style.display = "block";
+      matchCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  updateSearchInfo(query, matchCount);
+}
+
+// Global hook matching your search box clear onclick attribute
+function onSearchClear() {
+  if (siteSearchInput) {
+    siteSearchInput.value = "";
+    onSearchInput(siteSearchInput);
+    siteSearchInput.focus();
+  }
+}
+</script>
+
+{{ end }}

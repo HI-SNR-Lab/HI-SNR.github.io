@@ -1,0 +1,95 @@
+<div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+  <p>The High-quality Imaging, Signals, N' Radar (HI-SNR) laboratory develops data assimilation, computational imaging, and signal processing methods in two areas:</p>
+
+  {{ partial "shortcodes/accordion.html" (dict 
+      "title" "1. Multistatic Radar for Environmental Applications" 
+      "content" "Your nested accordion body content descriptions go here."
+  ) }}
+
+  
+  {{ partial "shortcodes/accordion.html" (dict 
+      "title" "2. Computational Photography" 
+      "content" "We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data."
+  ) }}
+
+  {{ partial "section.html" site }}
+
+  <h2>Research Areas in Computational Photography</h2>
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/photography.jpg" 
+    "Link" "research" 
+    "Title" "Equitable Imaging" 
+    "Flip" true 
+    "Text" "We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a>") 
+  }}
+
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/people_in_photo.jpg" 
+    "Link" "/research/" 
+    "Title" "Behavioral Studies for Improved Imaging" 
+    "Flip" true 
+    "Text" "We research human behavioral processes that influence subjective interpretation of image quality and integrate findings from these studies into improved imaging algorithms.") 
+  }}
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/compressive_sensing.png" 
+    "Link" "/research/" 
+    "Title" "Compressive Sensing" 
+    "Flip" true 
+    "Text" "We develop imaging methods and rendering algorithms for reconstructing 3D images from reduced dimensionality data.") 
+  }}
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+
+  <h2>Research Areas in Environmental Radar</h2>
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/approachingradar.jpg" 
+    "Link" "/research/" 
+    "Title" "Cryosphere Radars" 
+    "Text" "We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions.") 
+  }}
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/tree_radar.gif" 
+    "Link" "/research/" 
+    "Title" "Biosphere Radars" 
+    "Flip" true 
+    "Text" "We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health.") 
+  }}
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+  {{ partial "feature.html" (dict 
+    "Image" "images/drone_ani.gif" 
+    "Link" "/research/" 
+    "Title" "Near Subsurface Radar" 
+    "Text" "We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.") 
+  }}
+  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+
+  <h2>Highlighted</h2>
+  <p>2020 IGARSS Prize Paper Award Winner<br>  
+  <a href="https://ieee.org">Processing-Based Synchronization Approach for Bistatic Radar Glacial Tomography</a><br>  
+  This novel processing based synchronization approach allows coherent long-offset radar processing. This is a key enabling technology for radar tomography of glaciers.<br>   
+  <em>N. Bienert, D.. Schroeder, S. Peters, M. Siegfried</em></p>
+
+  {{ partial "shortcodes/youtube.html" (dict "id" "WaF6N42GQiw") }}
+
+  {{ partial "section.html" . }}
+
+  <h2>All</h2>
+
+  {{ partial "search-box.html" . }}
+
+  {{ partial "search-info.html" . }}
+
+  {{ partial "list.html" (dict "context" . "data" "citations" "component" "citation" "style" "rich") }}
+
+</div>

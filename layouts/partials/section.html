@@ -1,0 +1,12 @@
+{{- /* Read parameter options cleanly. Default to a light background divider row */ -}}
+{{- $dark := false -}}
+{{- if reflect.IsMap . -}}
+  {{- if isset . "dark" }}{{ $dark = .dark }}{{ end -}}
+{{- end -}}
+
+<!-- Closing the previous text flow block and opening a clean, spaced structural boundary grid line -->
+</div>
+</section>
+
+<section class="site-section-divider {{ if eq $dark true }}section-dark-bg{{ else }}section-light-bg{{ end }}">
+  <div class="section-inner-wrapper">

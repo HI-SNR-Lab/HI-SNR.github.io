@@ -1,0 +1,32 @@
+<div class="post-info">
+  {{if .Author}}
+    {{with index .MembersMap .Author}}
+      {{template "portrait.html" dict "Lookup" $.Author "Style" "tiny"}}
+    {{else}}
+      <span title="Author">
+        {{template "icon.html" "fa-solid fa-feather-pointed"}}
+        <span>{{.Author}}</span>
+      </span>
+    {{end}}
+  {{end}}
+
+  {{if .Published}}
+    <span title="Originally published on">
+      {{template "icon.html" "fa-regular fa-calendar"}}
+      <span>{{.Published.Format "January 02, 2006"}}</span>
+    </span>
+  {{end}}
+
+  {{if .Updated}}
+    {{if ne (.Updated.Format "January 02, 2006") (.Published.Format "January 02, 2006")}}
+      <span title="Last updated on">
+        {{template "icon.html" "fa-solid fa-clock-rotate-left"}}
+        <span>{{.Updated.Format "January 02, 2006"}}</span>
+      </span>
+    {{end}}
+  {{end}}
+</div>
+
+{{if .Tags}}
+  {{template "tags.html" dict "Tags" .Tags "Link" "blog"}}
+{{end}}

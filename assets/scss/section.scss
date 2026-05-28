@@ -1,0 +1,74 @@
+$page: 1000px;
+$padding: 40px;
+
+section {
+  padding: $padding Max($padding, calc(50% - (#{$page} / 2)));
+  transition: background var(--transition), color var(--transition);
+}
+
+section[data-size="wide"] {
+  padding: $padding;
+}
+
+section[data-size="full"] {
+  padding: 0;
+}
+
+section[data-size="full"] > * {
+  margin: 0;
+  border-radius: 0;
+}
+
+section[data-size="full"] img {
+  border-radius: 0;
+}
+
+main > section:last-of-type {
+  flex-grow: 1;
+}
+
+main > section:nth-of-type(odd) {
+  background: var(--background);
+}
+
+main > section:nth-of-type(even) {
+  background: var(--background-alt);
+}
+
+$page: 1000px;
+$padding: 40px;
+
+/* Fix the global block layout spacing settings */
+.site-section-divider {
+  width: 100% !important;
+  display: block;
+  box-sizing: border-box;
+  clear: both;
+  
+  /* Apply your original mathematical centering logic safely here */
+  padding: 60px Max($padding, calc(50% - (#{$page} / 2))) !important; 
+  transition: background var(--transition), color var(--transition);
+}
+
+.section-inner-wrapper {
+  width: 100%;
+  max-width: $page;
+  margin: 0 auto;
+}
+
+/* Background Color State Swapping */
+.section-light-bg {
+  background: var(--background-alt, #fafafa);
+  color: var(--text, #000);
+}
+
+.section-dark-bg {
+  background: var(--background, #181818);
+  color: var(--text, #fff);
+  border-top: 1px solid var(--light-gray, #404040);
+  border-bottom: 1px solid var(--light-gray, #404040);
+}
+
+/* Adjustments for explicit size overrides from your old Jekyll template */
+.site-section-divider[data-size="wide"] { padding: $padding !important; }
+.site-section-divider[data-size="full"] { padding: 0 !important; }

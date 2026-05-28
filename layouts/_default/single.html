@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="site-page-container">
+
+  <!-- Open the primary section block wrapper directly on line 1 -->
+  <section class="site-section-divider section-light-bg">
+    <div class="section-inner-wrapper">
+      
+      <article class="single-content">
+        <header class="content-header">
+          <h1 style="font-size: 36px; margin-bottom: 25px;"><b>{{ .Title }}</b></h1>
+        </header>
+        
+        <div class="markdown-body">
+          {{ .Content }}
+        </div>
+      </article>
+
+    <!-- Close the final unclosed trailing structural section safely at the foot of the layout -->
+    </div>
+  </section>
+
+</div>
+{{ end }}

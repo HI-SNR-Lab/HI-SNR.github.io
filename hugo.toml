@@ -1,0 +1,38 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "HI SNR Lab"
+description = ""
+enableInlineShortcodes = true
+
+[watch]
+  excludePattern = '(?i)\.(git|cache|sass-cache|jekyll-metadata)|_site|node_modules'
+
+[params]
+  subtitle = ""
+  header = "images/background.jpg"
+  footer = "images/background.jpg"
+  logo_text = true
+  proofer = false
+
+[params.links]
+  email = "bienert@colorado.edu"
+  orcid = "0000-0002-9428-327X"
+  google-scholar = "LfBn-L0AAAAJ&hl=en"
+  github = "Imaging-Group"
+  twitter = "DNE"
+  youtube = "DNE"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+  noClasses = false
+  style = "github"
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 1

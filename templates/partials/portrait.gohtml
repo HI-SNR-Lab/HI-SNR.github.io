@@ -1,0 +1,30 @@
+{{/* expects: .Member, .PageSlug, .Types */}}
+
+<div class="portrait-wrapper">
+  <a
+    {{ if ne .PageSlug .Member.Slug }}href="{{ .Member.URL }}"{{ end }}
+    class="portrait"
+    aria-label="{{ if .Member.Name }}{{ .Member.Name }}{{ else }}member link{{ end }}"
+  >
+    <img
+      src="{{ .Member.Image }}"
+      class="portrait-image"
+      alt="member portrait"
+      loading="lazy"
+    />
+
+    {{ if .Member.Name }}
+      <span class="portrait-name">{{ .Member.Name }}</span>
+    {{ end }}
+
+    {{ if or .Member.Description (index .Types .Member.Role).Description }}
+      <span class="portrait-description">
+        {{ with .Member.Description }}{{ . }}{{ else }}{{ (index .Types .Member.Role).Description }}{{ end }}
+      </span>
+    {{ end }}
+
+    {{ if .Member.Affiliation }}
+      <span class="portrait-affiliation">{{ .Member.Affiliation }}</span>
+    {{ end }}
+  </a>
+</div>

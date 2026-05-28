@@ -1,0 +1,36 @@
+{{ $post := .Include }}
+
+{{ if .Include.Lookup }}
+  {{ $post = index (where $.Site.Posts "Slug" .Include.Lookup) 0 }}
+{{ end }}
+
+<div class="post-excerpt-container">
+  <div class="post-excerpt">
+
+    {{ $url := $post.URL }}
+    {{ $title := $post.Title }}
+    {{ $image := $post.Image }}
+
+    {{ if $image }}
+      <a href="{{ $url }}" class="post-excerpt-image" aria-label="{{ $title }}">
+        <img src="{{ $image }}" alt="{{ $title }}" loading="lazy">
+      </a>
+    {{ end }}
+
+    <div class="post-excerpt-text">
+      <a href="{{ $url }}">{{ $title }}</a>
+
+      {{ partial "post-info.html" (dict
+        "author" $post.Author
+        "published" $post.Date
+        "updated" $post.LastModifiedAt
+        "tags" $post.Tags
+      ) }}
+
+      <p data-search="{{ $post.Search }}">
+        {{ $post.Excerpt }}
+      </p>
+    </div>
+
+  </div>
+</div>

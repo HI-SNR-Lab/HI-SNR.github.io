@@ -1,0 +1,19 @@
+<div class="post-nav">
+  <span>
+    {{ if .post.previous }}
+      {{ partial "icon.html" (dict "icon" "fa-solid fa-angle-left") }} Previous post<br>
+      <a href="{{ .post.previous.url | relURL }}">
+        {{ .post.previous.title }}
+      </a>
+    {{ end }}
+  </span>
+
+  <span>
+    {{ if .post.next }}
+      Next post {{ partial "icon.html" (dict "icon" "fa-solid fa-angle-right") }}<br>
+      <a href="{{ .post.next.url | relURL }}">
+        {{ .post.next.title }}
+      </a>
+    {{ end }}
+  </span>
+</div>

@@ -1,0 +1,141 @@
+{{ define "main" }}
+<!-- 
+  1. MASTER CONTAINMENT BLOCK:
+  By adding the 'markdown-body' and 'single-content' class definitions, 
+  this entire page instantly maps right to your var(--body) font families.
+-->
+<div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+  <h1 style="font-size: 40px;"><b>Computational Imaging in Photography and Environmental Radar</b></h1>
+
+  <!-- Sub-disciplines row with custom blue diamond layout markers -->
+  <div class="intro-description">
+    <h5 class="lab-sub-disciplines">
+      Compressed Sensing <span>♦</span> 
+      Data Fusion <span>♦</span> 
+      Signal Processing <span>♦</span> 
+      Adaptive Algorithms <span>♦</span> 
+      Data Assimilation
+    </h5>
+  </div>
+
+  <!-- Carousel Render Pass -->
+  {{ partial "carousel.html" (dict "page" . "number" 1 "height" 400 "unit" "px" "duration" 5) }}
+
+  {{ partial "section.html" . }}
+
+  <div class="epic-title" >
+    <h2 style="text-align: center; font-size: 1.75rem; line-height: 1.5; font-weight: 500; margin: 2rem 0;">
+      At the High precision Imaging, Signals 'N Radar Lab, we develop computational imaging techniques that sense our environment at a scale, resolution, or quality that was previously impossible.
+    </h2>
+  </div>
+
+  <h2 class="section-heading" style="font-size: 2rem; margin-top: 2.5rem;">Research Areas</h2>
+  
+  <p class="body-text">
+    We develop imaging methods, including compressed sensing, data fusion, signal processing, data assimilation, and adaptive algorithms for both camera and radar applications. In both areas, a core focus is image formation with incomplete data.
+  </p>
+
+  {{/* 1. Render the button layout to a variable */}}
+  {{ $button := partial "button.html" (dict 
+      "link" "research" 
+      "text" "See our publications" 
+      "icon" "fa-solid fa-arrow-right" 
+      "flip" true 
+      "style" "bare"
+  ) }}
+  {{ $combinedText := printf "<p>We are inventing radars, signal processing algorithms, and data assimilation techniques to measure the environment at scales previously unexplored. Our systems are deployed to improve geophysical understanding of the earth and to aid in resource management. We have developed systems that inform predictions for sea level rise and wildfire risk, as well as monitoring ecosystem and agricultural health.</p> %s" 
+  $button }} {{ partial "feature.html" (dict 
+      "Image" "images/approachingradar.jpg" 
+      "Link" "research" 
+      "Title" "Environmental Radar" 
+      "flip" true 
+      "Text" ($combinedText | safeHTML)
+  ) }}
+
+  {{ $button := partial "button.html" (dict 
+    "link" "research" 
+    "text" "See our publications" 
+    "icon" "fa-solid fa-arrow-right" 
+    "flip" true 
+    "style" "bare") 
+  }} 
+  {{ $combinedText := printf "<p>We are developing signal processing algorithms, data fusion methods, compressed sensing, and adaptive algorithms to form beautiful photos and renderings that represent our lives. Our algorithms have been used in equitable imaging algorithms that ensure beautiful, crisp images for all users. We are developing compressive sensing methods for reduced cost 3D imaging for medical applications.</p> %s" $button }}
+  {{ partial "feature.html" (dict 
+    "Image" "images/camera_testing.jpg" 
+    "Link" "research" 
+    "Title" "Computational Photography" 
+    "flip" false 
+    "Text" ($combinedText | safeHTML)) 
+  }}
+
+
+  <div class="epic-title" style="margin-top: 3rem; margin-bottom: 4rem;">
+    {{ partial "button.html" (dict "Link" "orca" "Text" "Documentation on Open Code Radar Architecture (ORCA)" "style" "bare" "background" "#ddddee") }}
+  </div>
+
+</div>
+
+<style>
+/* 
+  HOMEPAGE GLOBAL TYPOGRAPHY COUPLER:
+  Forces your custom blocks, headings, and paragraphs to inherit 
+  your site-wide Barlow layout variables from main.scss.
+*/
+.markdown-body,
+.markdown-body p.body-text,
+.markdown-body .epic-title,
+.markdown-body .epic-title h2 {
+  /* Forces the layout out of Times New Roman and into your Barlow body font stack */
+  font-family: var(--body), "Barlow", sans-serif !important;
+  color: var(--text) !important;
+}
+
+/* Explicit layout styling for the large epic title statement banner */
+.markdown-body .epic-title h2 {
+  font-size: 1.65rem !important;
+  line-height: 1.5 !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  margin: 0;
+  width: 100%;
+}
+
+.markdown-body h1.lab-main-title,
+.markdown-body h2.section-heading,
+.markdown-body h2 {
+  font-family: var(--heading), "Barlow", sans-serif !important;
+  font-weight: var(--bold, 600) !important;
+  color: var(--text) !important;
+}
+
+.intro-description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin: 1rem 0;
+}
+
+h5.lab-sub-disciplines {
+  font-family: var(--body), "Barlow", sans-serif !important;
+  font-weight: var(--semi-bold, 500) !important;
+  font-size: 1.2rem !important;
+  color: var(--gray, #808080) !important;
+  text-align: center !important;
+  margin: 0;
+  width: 100%;
+}
+
+h5.lab-sub-disciplines span {
+  color: var(--primary, #0795d9);
+  margin: 0 12px;
+  font-size: 0.95rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+</style>
+
+{{ end }}

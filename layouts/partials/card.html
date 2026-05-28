@@ -1,0 +1,46 @@
+<div class="card" data-style="{{ .Style }}">
+  <a
+    {{ if .Link }}
+      href="{{ .Link }}"
+    {{ end }}
+    aria-label="{{ if .Title }}{{ .Title }}{{ else }}card link{{ end }}"
+    class="card-image"
+  >
+    <img
+      src="{{ .Image }}"
+      alt="{{ if .Title }}{{ .Title }}{{ else }}card image{{ end }}"
+      loading="lazy"
+      {{ partial "image_onerror.go" . }}
+    >
+  </a>
+
+  <div class="card-text">
+    {{ if .Title }}
+      <a
+        {{ if .Link }}
+          href="{{ .Link }}"
+        {{ end }}
+        {{ if .Tooltip }}
+          data-tooltip="{{ .Tooltip }}"
+        {{ end }}
+        class="card-title"
+      >
+        {{ .Title }}
+      </a>
+    {{ end }}
+
+    {{ if .Subtitle }}
+      <span class="card-subtitle">{{ .Subtitle }}</span>
+    {{ end }}
+
+    {{ if .Description }}
+      <p>
+        {{ .Description | markdownify }}
+      </p>
+    {{ end }}
+
+    {{ if or .Tags .Repo }}
+      {{ partial "tags.go" dict "tags" .Tags "repo" .Repo }}
+    {{ end }}
+  </div>
+</div>

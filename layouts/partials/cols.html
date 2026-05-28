@@ -1,0 +1,5 @@
+<div class="cols" style="--cols: {{ len .Include }}">
+  {{ range $key, $val := .Include }}
+    <div>{{ $val | markdownify }}</div>
+  {{ end }}
+</div>

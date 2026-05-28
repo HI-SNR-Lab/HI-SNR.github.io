@@ -1,0 +1,18 @@
+<div class="search-box">
+  <input
+    type="text"
+    id="site-search-input"
+    class="search-input"
+    oninput="onSearchInput(this)"
+    placeholder="Search items on this page"
+  />
+  <button
+    id="site-search-clear-btn"
+    disabled
+    data-tooltip="Clear search"
+    aria-label="clear search"
+    onclick="onSearchClear()"
+  >
+    {{ partial "icon.html" (dict "Icon" "fa-solid fa-magnifying-glass") }}
+  </button>
+</div>

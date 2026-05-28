@@ -1,0 +1,9 @@
+{{- if .icon -}}
+  {{- if strings.Contains .icon ".svg" -}}
+    <span class="icon">
+      {{- .icon | safeHTML | trim -}}
+    </span>
+  {{- else if ne .icon "" -}}
+    <i class="icon {{ .icon }}"></i>
+  {{- end -}}
+{{- end -}}

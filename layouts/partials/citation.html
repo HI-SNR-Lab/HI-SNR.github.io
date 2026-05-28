@@ -1,0 +1,44 @@
+{{ $citation := . }}
+
+{{ if .lookup }}
+  {{ $citation = (first 1 (where site.Data.citations "id" .lookup)) | first }}
+{{ end }}
+
+<div class="citation-container">
+  <div class="citation">
+
+    {{ if eq .style "rich" }}
+      <a href="{{ $citation.link | relURL }}" class="citation-image" aria-label="{{ $citation.title | default "[citation link]" }}">
+        <img src="{{ $citation.image | relURL }}" alt="{{ $citation.title | default "[citation image]" }}" loading="lazy">
+      </a>
+    {{ end }}
+
+    <div class="citation-text">
+      {{ $type := index site.Data.types $citation.type }}
+      {{ partial "icon.html" (dict "icon" $type.icon) }}
+
+      <a href="{{ $citation.link | relURL }}" class="citation-title">
+        {{ $citation.title | default "[no title info]" }}
+      </a>
+
+      <div class="citation-authors">
+        {{ delimit (first 5 $citation.authors) ", " | default "[no author info]" }}
+      </div>
+
+      <div class="citation-details">
+        <span class="citation-publisher">{{ $citation.publisher | default "[no publisher info]" }}</span>
+        &nbsp;·&nbsp;
+        <span class="citation-date">{{ $citation.date | time.Format "02 Jan 2006" | default "[no date info]" }}</span>
+        &nbsp;·&nbsp;
+        <span class="citation-id">{{ $citation.id | default "[no id info]" }}</span>
+      </div>
+
+      {{ if eq .style "rich" }}
+        {{ with $citation.description }}
+          <div class="citation-description">{{ . | markdownify }}</div>
+        {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+</div>

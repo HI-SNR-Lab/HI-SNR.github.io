@@ -1,0 +1,21 @@
+{{ $type := .type }}
+
+{{ $data := index site.Data.types $type }}
+
+{{ $color := "#808080" }}
+{{ if $data.color }}
+  {{ $color = $data.color }}
+{{ end }}
+
+{{ $icon := "fa-solid fa-circle-info" }}
+{{ if $data.icon }}
+  {{ $icon = $data.icon }}
+{{ end }}
+
+<div class="alert" style="--color: {{ $color }}">
+  {{ partial "icon.html" (dict "icon" $icon) }}
+
+  <div class="alert-content">
+    {{ .content | markdownify }}
+  </div>
+</div>

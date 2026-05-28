@@ -1,0 +1,26 @@
+{{- $button := .Include -}}
+{{- $button = default (index .Site.Data.Types .Include.Type) $button -}}
+
+{{- if or $button.Link $button.Icon $button.Text -}}
+<div class="button-wrapper">
+  <a
+    class="button"
+    href="{{ relURL (replace $button.Link "$LINK" $button.Link) }}"
+    {{- if .Include.Background }} style="background: {{ .Include.Background }};"{{- end }}
+    {{- if $button.Tooltip }}
+      data-tooltip="{{ $button.Tooltip }}"
+    {{- end }}
+    data-style="{{ .Include.Style }}"
+    {{- if .Include.Flip }}
+      data-flip
+    {{- end }}
+    aria-label="{{ or $button.Tooltip $button.Icon "button" }}"
+  >
+    {{ partial "icon.html" (dict "icon" $button.Icon) }}
+
+    {{- if and $button.Text (ne $button.Text "") }}
+      <span>{{ $button.Text }}</span>
+    {{- end }}
+  </a>
+</div>
+{{- end }}

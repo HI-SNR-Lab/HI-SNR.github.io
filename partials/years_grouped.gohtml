@@ -1,0 +1,42 @@
+{{- range $y := .Years }}
+  {{- if gt (len $.Years) 1 }}
+<h3 id="{{ $y.Name }}">{{ $y.Name }}</h3>
+  {{- end }}
+
+  {{- range $d := $y.Items }}
+    {{- $style := default $d.Style $.Style }}
+
+    {{ template (printf "%s.html" $.Component) dict
+      "affiliation" $d.Affiliation
+      "author" $d.Author
+      "authors" $d.Authors
+      "buttons" $d.Buttons
+      "caption" $d.Caption
+      "content" $d.Content
+      "date" $d.Date
+      "description" $d.Description
+      "excerpt" $d.Excerpt
+      "height" $d.Height
+      "icon" $d.Icon
+      "id" $d.ID
+      "image" $d.Image
+      "last_modified_at" $d.LastModifiedAt
+      "link" $d.Link
+      "lookup" $d.Lookup
+      "name" $d.Name
+      "publisher" $d.Publisher
+      "repo" $d.Repo
+      "role" $d.Role
+      "slug" $d.Slug
+      "style" $style
+      "subtitle" $d.Subtitle
+      "tags" $d.Tags
+      "text" $d.Text
+      "title" $d.Title
+      "tooltip" $d.Tooltip
+      "type" $d.Type
+      "url" $d.URL
+      "width" $d.Width
+    }}
+  {{- end }}
+{{- end }}

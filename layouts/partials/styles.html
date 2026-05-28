@@ -1,0 +1,11 @@
+<!-- Local third-party styles (Bypasses the network hang permanently) -->
+<link href="{{ "css/pygments.css" | relURL }}" rel="stylesheet" />
+
+{{- /* HIGH PERFORMANCE SCSS COMPILER PIPELINE */ -}}
+{{- if resources.Get "scss/main.scss" -}}
+  {{- $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint -}}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+{{- else if resources.Get "scss/style.scss" -}}
+  {{- $style := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
+  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+{{- end -}}

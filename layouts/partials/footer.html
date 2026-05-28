@@ -1,0 +1,40 @@
+{{ $image := (.Params.footer | default .Site.Params.footer) | relURL }}
+
+{{ $dark := true }}
+{{ if ne (index .Params "footer-dark") nil }}
+  {{ $dark = index .Params "footer-dark" }}
+{{ else if ne (index .Site.Params "footer-dark") nil }}
+  {{ $dark = index .Site.Params "footer-dark" }}
+{{ end }}
+
+<footer
+  class="background"
+  style="--image: url('{{ $image }}')"
+  {{ if or (eq $dark true) (eq $dark false) }}
+    data-dark="{{ $dark }}"
+  {{ end }}
+  data-size="wide"
+>
+  <div>
+    {{ range $key, $value := .Site.Params.links }}
+      {{ partial "button.html" (dict "type" $key "text" "" "link" $value "style" "bare") }}
+    {{ end }}
+  </div>
+
+  <div>
+    &copy; {{ now.Format "2006" }}
+    {{ .Site.Title }}
+    &nbsp; | &nbsp; Built with
+    <a href="https://github.com/greenelab/lab-website-template">
+      Lab Website Template
+    </a>
+  </div>
+
+  <input
+    type="checkbox"
+    class="dark-toggle"
+    data-tooltip="Dark mode"
+    aria-label="toggle dark mode"
+    oninput="onDarkToggleChange(event)"
+  >
+</footer>
