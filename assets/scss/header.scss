@@ -12,6 +12,14 @@ header {
   gap: 20px;
   padding: 20px;
   box-shadow: var(--shadow);
+  
+  /* 
+     THE SINGLE-LINE SHADING MATRIX:
+     This stacks a 60% black tint layer directly on top of your asset image.
+     Change "/images/header-bg.jpg" to match your actual header image path!
+  */
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), 
+              url("/images/header-bg.jpg") no-repeat center/cover !important;
 
   @if $sticky {
     position: sticky !important;
@@ -20,10 +28,27 @@ header {
   }
 }
 
-header a {
-  color: var(--text);
-  text-decoration: none;
+// Find this block in the middle of your file and replace it completely:
+.background:before {
+  // 1. Keeps the image variable that works on the footer/body
+  background-image: var(--image); 
+  
+  // 2. STACKS THE SHADING LAYER DIRECTLY IN FRONT OF THE IMAGE
+  // The first line acts as an overlay mask, the second line keeps your image
+  background: linear-gradient(rgba(0, 0, 0, 10.00), rgba(0, 0, 0, 10.00)), 
+              var(--image) no-repeat center/cover !important;
 }
+
+// 3. FORCE YOUR NAV TEXT AND LINKS TO WHITE
+// Since the image is now dark, your original dark text links won't be legible.
+header a,
+.title,
+.subtitle,
+.nav-toggle:after,
+nav > a {
+  color: #ffffff !important;
+}
+
 
 .home {
   display: flex;
@@ -108,7 +133,7 @@ nav > a:hover {
   color: var(--primary);
 }
 
-header:not([data-big]) {
+header {
   @media (max-width: $collapse) {
     justify-content: flex-end;
 
@@ -128,36 +153,3 @@ header:not([data-big]) {
   }
 }
 
-header[data-big] {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: $big-padding 20px;
-
-  @if $sticky {
-    top: unset;
-  }
-
-  .home {
-    flex-direction: column;
-    flex-grow: 0;
-  }
-
-  .logo {
-    height: $logo-big;
-  }
-
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-size: var(--xxl);
-  }
-
-  .subtitle {
-    font-size: var(--large);
-  }
-}

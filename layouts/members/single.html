@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<div class="member-profile-container" style="max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: left; font-family: var(--body, 'Barlow'), sans-serif;">
+  
+  <div class="member-profile-header" style="display: flex; gap: 40px; align-items: center; margin-bottom: 40px; flex-wrap: wrap;">
+    
+    <!-- 1. DYNAMIC PORTRAIT IMAGE IN THE BODY -->
+    {{ if .Params.image }}
+      <div class="profile-image-wrapper">
+        <img 
+          src="{{ .Params.image | relURL }}" 
+          alt="{{ .Params.name | default .Title }}" 
+          style="width: 200px; height: 200px; border-radius: 999px; object-fit: cover; box-shadow: var(--shadow);"
+          onerror="this.src='{{ "images/fallback.svg" | relURL }}'; this.onerror=null;"
+        >
+      </div>
+    {{ end }}
+
+    <!-- 2. MEMBER DETAILS -->
+    <div class="profile-details-wrapper">
+      <h1 style="margin: 0 0 10px 0; font-family: var(--heading); font-weight: 700; color: var(--text);">
+        {{ .Params.name | default .Title }}
+      </h1>
+    
+      {{ if .Params.affiliation }}
+        <p style="margin: 0; color: var(--gray); font-size: 1rem;">
+          {{ .Params.affiliation }}
+        </p>
+      {{ end }}
+    </div>
+
+  </div>
+
+  <!-- 3. PERSONAL DESCRIPTION / BIOGRAPHY COPY -->
+  <div class="member-bio-content" style="line-height: 1.6; font-size: 1.05rem; color: var(--text);">
+    {{ .Content }}
+  </div>
+
+</div>
+
+{{ end }}

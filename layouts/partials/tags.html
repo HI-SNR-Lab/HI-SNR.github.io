@@ -1,0 +1,53 @@
+{{/* 
+  1. COMPONENT STATE & TAG PARSING
+  We accept the passed tags map/slice, flatten it to lowercase strings, 
+  replace spaces with dashes, and filter down to unique values.
+*/}}
+{{ $tags := slice }}
+
+{{ if .tags }}
+  {{/* Loop through the array or object passed to the partial */}}
+  {{ range $key, $value := .tags }}
+    {{/* Handle both raw string arrays and key-value objects */}}
+    {{ $tagString := $value }}
+    {{ if eq (printf "%T" .tags) "map[string]interface {}" }}
+      {{ $tagString = $key }}
+    {{ end }}
+    
+    {{/* Transform to lowercase and swap spaces for hyphens */}}
+    {{ $cleanedTag := $tagString | lower | replaceRE "\\s+" "-" }}
+    
+    {{ if $cleanedTag }}
+      {{ $tags = $tags | append $cleanedTag }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Filter the array to unique items mimic-ing Jekyll's | uniq */}}
+{{ $tags = $tags | uniq }}
+
+{{/* 2. RESOLVE BASE TARGET LINK */}}
+{{ $link := .link | default .context.RelPermalink }}
+
+{{/* 3. HTML RENDERING ELEMENT */}}
+{{ if or (gt (len $tags) 0) .repo }}
+  <div
+    class="tags"
+    {{ if .repo }}
+      data-repo="{{ .repo }}"
+    {{ end }}
+    {{ if $link }}
+      data-link="{{ $link }}"
+    {{ end }}
+  >
+    {{ range $tags }}
+      <a
+        href="{{ $link }}?search=%22tag:%20{{ . }}%22"
+        class="tag"
+        data-tooltip="Show items with the tag &quot;{{ . }}&quot;"
+      >
+        {{ . }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+    <h1 class="page-title">{{ .Title }}</h1>
+
+    <p>At HI-SNR Lab, we are dedicated to open science. We believe that sharing our code and data not only enhances collaboration but also accelerates innovation within the research community. By making our projects openly accessible, we invite others to build upon our work, fostering transparency and reproducibility in scientific research. We encourage open dialogue and contributions, as we strive to create a more inclusive and collaborative scientific environment.</p>
+
+    {{ partial "tags.html" (dict "Tags" "code, hardware, data") }}
+
+    {{ partial "section.html" }}
+
+
+</div>
+
+{{ end }}

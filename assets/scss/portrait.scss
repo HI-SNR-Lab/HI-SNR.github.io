@@ -12,6 +12,7 @@
   width: 175px;
   max-width: calc(100% - 20px - 20px);
   text-decoration: none;
+  color: inherit;
 }
 
 .portrait[data-style="small"] {
@@ -64,8 +65,14 @@
 }
 
 .portrait-name {
-  font-family: var(--heading);
-  font-weight: var(--semi-bold);
+  font-family: var(--heading, 'Barlow'), sans-serif;
+  text-align: center;
+  display: block;
+  
+  // Clean, standard CSS inheritance override
+  &, a, span {
+    font-weight: 700; 
+  }
 }
 
 .portrait[data-style="tiny"] {

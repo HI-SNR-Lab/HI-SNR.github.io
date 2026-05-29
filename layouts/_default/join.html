@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+    <h1 class="page-title">{{ .Title }}</h1>
+  
+  <!-- This renders any plain text paragraphs you write below the triple-dashes in join.md -->
+  <div class="page-content" style="margin-bottom: 40px; font-size: 1.1rem; text-align: left;">
+    {{ .Content }}
+  </div>
+
+  <!-- THE DYNAMIC COLUMN CARD LOOP -->
+  <div class="join-grid" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: stretch;">
+    {{ if .Params.card_columns }}
+      {{ range .Params.card_columns }}
+        <div class="join-card" style="flex: 1; min-width: 300px; max-width: 380px; padding: 25px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.05); background: var(--background); display: flex; flex-direction: column; text-align: left;">
+          
+          {{ if .title }}
+            <h3 class="card-title" style="margin-top: 0; font-family: var(--heading); font-size: 1.3rem; font-weight: 700; color: var(--primary);">
+              {{ .title }}
+            </h3>
+          {{ end }}
+          
+          {{ if .description }}
+            <p class="card-description" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; color: var(--text);">
+              {{ .description | markdownify }}
+            </p>
+          {{ end }}
+
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+
+    
+    <p>Interested in joining our team? Check out our opportunities below and reach out. We would love to hear from you! </p>
+
+    <p><b>Prospective PhD Students: To mitigate bias, we no longer meet or correspond with potential PhD applicants outside of the standard [CU application process](https://www.colorado.edu/ecee/admissions/graduate-admissions). ** If you are interested in joining the lab as a PhD student, please apply be sure to select Professor Nicole Bienert as a potential advisor in the application portal - this will route your application to Prof. Bienert.</b></p>
+
+    <p><b>Prospective Postdoc and Volunteers:</b>
+    <a href="mailto:bienert@colorado.edu">Email Professor Nicole Bienert</a> to discuss opportunities. Please include the following information:  
+    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 15px; margin-bottom: 15px; text-align: left; font-family: var(--body, 'Barlow'), sans-serif;">
+        <li> What are you interested in researching and why? What excites you? </li>
+        <li> Please link your resume or CV </li>
+        <li> A bit of information about yourself so that we can get to know you (this is our favorite part!) </li>
+    </ul></p>
+
+    
+
+</div>
+
+{{ end }}

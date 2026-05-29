@@ -1,0 +1,29 @@
+/* Container rules - Stacked on mobile */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  /* Spacing between stacked features */ }
+
+/* Two-column layout for desktop screens */
+@media (min-width: 768px) {
+  .feature {
+    flex-direction: row;
+    /* Default: Image on LEFT, Text on RIGHT */ }
+  /* When flip is true, reverse the row order: Text on LEFT, Image on RIGHT */
+  .feature[data-flip="true"] {
+    flex-direction: row-reverse; }
+  /* Make sure both halves take up exactly 50% width */
+  .feature-image,
+  .feature-text {
+    flex: 1;
+    width: 50%; } }
+
+/* Ensure images scale cleanly */
+.feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; }

@@ -60,7 +60,10 @@
 
     {{ if $member.Params.name }}
       <span class="portrait-name">
-        {{ $member.Params.name }}
+        <!-- The inline font-weight property forces the link text to be bold -->
+        <a href="{{ $member.RelPermalink }}" style="font-weight: 700 !important;">
+          {{ $member.Params.name }}
+        </a>
       </span>
     {{ end }}
 

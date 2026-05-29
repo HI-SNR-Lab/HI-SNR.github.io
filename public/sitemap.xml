@@ -4,6 +4,10 @@
   <url>
     <loc>http://localhost:8080/research/</loc>
   </url><url>
+    <loc>http://localhost:8080/projects/</loc>
+  </url><url>
+    <loc>http://localhost:8080/join/</loc>
+  </url><url>
     <loc>http://localhost:8080/members/austin-vera/</loc>
   </url><url>
     <loc>http://localhost:8080/members/carson-anderson/</loc>
@@ -34,11 +38,7 @@
   </url><url>
     <loc>http://localhost:8080/</loc>
   </url><url>
-    <loc>http://localhost:8080/join/</loc>
-  </url><url>
     <loc>http://localhost:8080/members/</loc>
-  </url><url>
-    <loc>http://localhost:8080/projects/</loc>
   </url><url>
     <loc>http://localhost:8080/tags/</loc>
   </url><url>

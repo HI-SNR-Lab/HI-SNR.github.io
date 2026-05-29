@@ -15,6 +15,20 @@
       <description></description>
     </item>
     <item>
+      <title>Projects</title>
+      <link>http://localhost:8080/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/projects/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Join</title>
+      <link>http://localhost:8080/join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/join/</guid>
+      <description></description>
+    </item>
+    <item>
       <title></title>
       <link>http://localhost:8080/members/austin-vera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -104,20 +118,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:8080/members/zoe-worrall/</guid>
       <description>&lt;p&gt;Zoe Worrall is a PhD student in the Electrical, Computer &amp;amp; Energy Engineering department at the University of Colorado Boulder. Within the HI SNR lab, she is developing an inversion algorithm and hardware system to determine water content within trees. She received a B.S. in Engineering from Harvey Mudd College. During her undergraduate degree, she conducted research using biophotonic systems, working on the in-vivo imaging system openIVIS and developing a system to perform off-axis holography for a neural imaging device. She has to programmed Ettus and AMD software defined radios through her past work with MIT Lincoln Laboratories as a summer intern and through the Harvey Mudd Clinic Program. In addition, she acted as a team lead during her senior year to develop the QuACK Overlay for HRL Laboratory&amp;rsquo;s Quantum Instrumentation Control Kit. Zoe&amp;rsquo;s research interests lie in the realm of signal processing and FPGA programming. In her free time, she can be found bouldering, drawing, playing Dungeons and Dragons, or skiing with friends.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Join</title>
-      <link>http://localhost:8080/join/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/join/</guid>
-      <description>&lt;p&gt;Interested in joining our team? Check out our opportunities below and reach out. We would love to hear from you!&lt;/p&gt;&#xA;&lt;p&gt;**Prospective PhD Students: To mitigate bias, we no longer meet or correspond with potential PhD applicants outside of the standard &lt;a href=&#34;https://www.colorado.edu/ecee/admissions/graduate-admissions&#34;&gt;CU application process&lt;/a&gt;. ** If you are interested in joining the lab as a PhD student, please apply be sure to select Professor Nicole Bienert as a potential advisor in the application portal - this will route your application to Prof. Bienert.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:8080/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:8080/projects/</guid>
-      <description>&lt;h1 id=&#34;-include-iconhtml-iconfa-solid-fa-wrench-projects&#34;&gt;{% include icon.html icon=&amp;ldquo;fa-solid fa-wrench&amp;rdquo; %}Projects&lt;/h1&gt;&#xA;&lt;p&gt;At HI-SNR Lab, we are dedicated to open science. We believe that sharing our code and data not only enhances collaboration but also accelerates innovation within the research community. By making our projects openly accessible, we invite others to build upon our work, fostering transparency and reproducibility in scientific research. We encourage open dialogue and contributions, as we strive to create a more inclusive and collaborative scientific environment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Team</title>
