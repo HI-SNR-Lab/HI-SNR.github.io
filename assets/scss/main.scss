@@ -1,6 +1,8 @@
 // @import "scss/theme";
-@import "alert.scss";
-@import "section.scss";
+// @import "alert.scss";
+// @import "section.scss";
+// @import "portrait.scss";
+
 
 // COLORS - Fallback and Light Mode Default combined directly into :root
 :root,
@@ -218,15 +220,18 @@ h1[style*="font-size: 40px;"] {
 }
 
 /* Highly specific scoped target chain to break through universal styles */
-.feature .feature-text p.feature-title,
 div.feature p.feature-title,
+.feature .feature-title,
 .feature-title {
   font-family: var(--heading), "Barlow", sans-serif !important; 
   text-transform: uppercase !important; 
   display: block !important;
   letter-spacing: 0.06em !important; 
   font-weight: 700 !important;
-  font-size: 1.8rem !important;
+  
+  /* CHANGED: Dropped from 1.8rem down to 1.3rem for a smaller, cleaner look */
+  font-size: 1.3rem !important; 
+  
   margin-bottom: 0.8rem !important;
 }
 

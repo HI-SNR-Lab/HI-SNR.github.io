@@ -61,16 +61,26 @@
 
   <nav class="nav-menu">
     <ul>
-      {{- $navPages := where site.AllPages "Params.nav" "!=" nil -}}
-      {{- range $navPages.ByParam "nav.order" }}
+      {{/* Changed 'site' to '.Site' to support older Hugo core engines */}}
+      {{ range .Site.Menus.main }}
         <li class="nav-item">
-          <a href="{{ .RelPermalink }}" data-tooltip="{{ .Params.nav.tooltip }}">
-            {{ .Title }}
+          <!-- 
+            We use universal string matching (eq $.RelPermalink .URL) 
+            which safely identifies the active page without crashing the layout tree.
+          -->
+          <a href="{{ .URL | relURL }}" 
+            title="{{ .Title }}" 
+            class="{{ if eq $.RelPermalink .URL }}active{{ end }}">
+            {{ .Name }}
           </a>
         </li>
-      {{- end }}
+      {{ end }}
     </ul>
   </nav>
+
+
+
+
 </header>
 
 <style>

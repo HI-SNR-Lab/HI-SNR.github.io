@@ -66,7 +66,14 @@
 </noscript>
 
   
-<link href="/css/pygments.css" rel="stylesheet" /><link href="http://localhost:8080/scss/main.min.9e9cb5c9b4a3da62bdc81335c5485cbf9c8448ca6288bb0ba580893b496b8f9e.css" rel="stylesheet" />
+<link href="/css/pygments.css" rel="stylesheet" /><link href="http://localhost:8080/scss/main.min.265239c534cdbd2995c7efc3f520e023a94c808800a0e07d669b1b2408b1dd1b.css" rel="stylesheet" />
+
+
+
+  
+  
+  <link href="http://localhost:8080/css/bundle.min.b06b4114cf4684439050e749cdb975a2fc9d70c974f81d049fab326e049c8224.css" rel="stylesheet" />
+
   
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
 <script src="https://unpkg.com/tippy.js@6" defer></script>
@@ -100,33 +107,41 @@
 
   <nav class="nav-menu">
     <ul>
+      
+      
         <li class="nav-item">
-          <a href="/" data-tooltip="Published works">
+          
+          <a href="/" 
+            title="Home" 
+            class="">
             Home
           </a>
         </li>
+      
         <li class="nav-item">
-          <a href="/research/" data-tooltip="Published works">
+          
+          <a href="/research/" 
+            title="Research" 
+            class="active">
             Research
           </a>
         </li>
+      
         <li class="nav-item">
-          <a href="/projects/" data-tooltip="Software, datasets, and more">
-            Projects
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="/team/" data-tooltip="About our team">
+          
+          <a href="/team/" 
+            title="Team" 
+            class="">
             Team
           </a>
         </li>
-        <li class="nav-item">
-          <a href="/join/" data-tooltip="Email, address, and location">
-            Join
-          </a>
-        </li>
+      
     </ul>
   </nav>
+
+
+
+
 </header>
 
 <style>
@@ -180,19 +195,7 @@ header.site-header .home {
     
     <main>
       
-<div class="site-page-container">
 
-  
-  <section class="site-section-divider section-light-bg">
-    <div class="section-inner-wrapper">
-      
-      <article class="single-content">
-        <header class="content-header">
-          <h1 style="font-size: 36px; margin-bottom: 25px;"><b>Research</b></h1>
-        </header>
-        
-        <div class="markdown-body">
-          
 <div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
 
   <p>The High-quality Imaging, Signals, N' Radar (HI-SNR) laboratory develops data assimilation, computational imaging, and signal processing methods in two areas:</p>
@@ -202,90 +205,171 @@ header.site-header .home {
     1. Multistatic Radar for Environmental Applications
   </summary>
   <div class="accordion-content" style="padding: 1rem 0 0.5rem 0; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem;">
-    
-    
-  We develop multistatic radars and algorithms for retreiving properties of the environment for the following purposes:
-    1. Equip scientists with the tools needed to improve our understanding of the environment. We develop radar-based methods for making measurements of environmental processes at a quality or scale that is not possible with existing tools. This includes projects such as generating 2D maps of the temperature distribution inside glaciers.
-    2. Develop systems than enable resource monitoring and improved resource management. This includes projects such as monitoring soil moisture for improved irrigaiton practices.  
-
-    We are a crib to grave team that puts environmental solutions into the hands of scientists and and environmental agencies. 
-  
+    Your nested accordion body content descriptions go here.
   </div>
 </details>
 
 
+  
   <details class="research-accordion"  style="margin: 1.5rem 0; border: 1px solid #ddd; border-radius: 6px; padding: 0.5rem 1rem; background: #fafafa;">
   <summary style="font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; font-size: 1.1rem; color: #1a1a1a;">
     2. Computational Photography
   </summary>
   <div class="accordion-content" style="padding: 1rem 0 0.5rem 0; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem;">
-    
-    
-  We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data.
-  
+    We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data.
   </div>
 </details>
 
 
-  {{ partial "section.html" site }}
+  
+</div>
+</section>
+
+<section class="site-section-divider section-light-bg">
+  <div class="section-inner-wrapper">
 
   <h2>Research Areas in Computational Photography</h2>
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/photography.jpg" 
-    "Link" "research" 
-    "Title" "Equitable Imaging" 
-    "Flip" true 
-    "Text" "We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a>") 
-  }}
+  
+     <div class="feature" data-flip="true">
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Equitable Imaging"
+  >
+    <img
+      src="/images/photography.jpg"
+      loading="lazy"
+      alt="Equitable Imaging"
+    >
+  </a>
 
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+  <div class="feature-text">
+    
+      <p class="feature-title">Equitable Imaging</p>
+    
+    <p>We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/people_in_photo.jpg" 
-    "Link" "/research/" 
-    "Title" "Behavioral Studies for Improved Imaging" 
-    "Flip" true 
-    "Text" "We research human behavioral processes that influence subjective interpretation of image quality and integrate findings from these studies into improved imaging algorithms.") 
-  }}
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/compressive_sensing.png" 
-    "Link" "/research/" 
-    "Title" "Compressive Sensing" 
-    "Flip" true 
-    "Text" "We develop imaging methods and rendering algorithms for reconstructing 3D images from reduced dimensionality data.") 
-  }}
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+  
+     <div class="feature" >
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Behavioral Studies for Improved Imaging"
+  >
+    <img
+      src="/images/people_in_photo.jpg"
+      loading="lazy"
+      alt="Behavioral Studies for Improved Imaging"
+    >
+  </a>
+
+  <div class="feature-text">
+    
+      <p class="feature-title">Behavioral Studies for Improved Imaging</p>
+    
+    <p>We research human behavioral processes that influence subjective interpretation of image quality and integrate findings from these studies into improved imaging algorithms. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
+
+
+
+  
+     <div class="feature" data-flip="true">
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Compressive Sensing"
+  >
+    <img
+      src="/images/compressive_sensing.png"
+      loading="lazy"
+      alt="Compressive Sensing"
+    >
+  </a>
+
+  <div class="feature-text">
+    
+      <p class="feature-title">Compressive Sensing</p>
+    
+    <p>We develop imaging methods and rendering algorithms for reconstructing 3D images from reduced dimensionality data. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
 
 
   <h2>Research Areas in Environmental Radar</h2>
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/approachingradar.jpg" 
-    "Link" "/research/" 
-    "Title" "Cryosphere Radars" 
-    "Text" "We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions.") 
-  }}
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+  
+     <div class="feature" data-flip="true">
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Cryosphere Radars"
+  >
+    <img
+      src="/images/approachingradar.jpg"
+      loading="lazy"
+      alt="Cryosphere Radars"
+    >
+  </a>
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/tree_radar.gif" 
-    "Link" "/research/" 
-    "Title" "Biosphere Radars" 
-    "Flip" true 
-    "Text" "We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health.") 
-  }}
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+  <div class="feature-text">
+    
+      <p class="feature-title">Cryosphere Radars</p>
+    
+    <p>We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
 
-  {{ partial "feature.html" (dict 
-    "Image" "images/drone_ani.gif" 
-    "Link" "/research/" 
-    "Title" "Near Subsurface Radar" 
-    "Text" "We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals.") 
-  }}
-  {{ partial "button.html" (dict "Link" "/research/" "Text" "See our publications" "Icon" "fa-solid fa-arrow-right" "flip" true "style" "bare") }}
+
+  
+     <div class="feature" data-flip="true">
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Biosphere Radar"
+  >
+    <img
+      src="/images/tree_radar.gif"
+      loading="lazy"
+      alt="Biosphere Radar"
+    >
+  </a>
+
+  <div class="feature-text">
+    
+      <p class="feature-title">Biosphere Radar</p>
+    
+    <p>We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
+
+
+    
+     <div class="feature" data-flip="true">
+  <a
+    href="/research"
+    class="feature-image"
+    aria-label="Near Subsurface Radar"
+  >
+    <img
+      src="/images/drone_ani.gif"
+      loading="lazy"
+      alt="Near Subsurface Radar"
+    >
+  </a>
+
+  <div class="feature-text">
+    
+      <p class="feature-title">Near Subsurface Radar</p>
+    
+    <p>We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+  </div>
+</div>
+
 
 
   <h2>Highlighted</h2>
@@ -294,30 +378,58 @@ header.site-header .home {
   This novel processing based synchronization approach allows coherent long-offset radar processing. This is a key enabling technology for radar tomography of glaciers.<br>   
   <em>N. Bienert, D.. Schroeder, S. Peters, M. Siegfried</em></p>
 
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WaF6N42GQiw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video player"></iframe>
-      </div>
+  <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+    <iframe 
+      src="https://youtube.com" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+</div>
 
 
-  {{ partial "section.html" . }}
+  
+</div>
+</section>
+
+<section class="site-section-divider section-light-bg">
+  <div class="section-inner-wrapper">
 
   <h2>All</h2>
 
-  {{ partial "search-box.html" . }}
-
-  {{ partial "search-info.html" . }}
-
-  {{ partial "list.html" (dict "context" . "data" "citations" "component" "citation" "style" "rich") }}
-
-</div>
-        </div>
-      </article>
-
+  <div class="search-box">
+  <input
+    type="text"
+    id="site-search-input"
+    class="search-input"
+    oninput="onSearchInput(this)"
+    placeholder="Search items on this page"
+  />
+  <button
+    id="site-search-clear-btn"
+    disabled
+    data-tooltip="Clear search"
+    aria-label="clear search"
+    onclick="onSearchClear()"
+  >
     
-    </div>
-  </section>
+  </button>
+</div>
+
+  <div class="search-info">
+  <span id="site-search-counter-text">Showing all items</span>
+</div>
+
+  <ul class="citation-list" style="list-style-type: none; padding-left: 0; margin-top: 1.5rem;">
+  
+  
+    <p style="color: var(--gray); font-style: italic;">No publications found.</p>
+  
+</ul>
+
 
 </div>
+
 
     </main>
     

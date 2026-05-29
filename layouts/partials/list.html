@@ -1,0 +1,20 @@
+<ul class="citation-list" style="list-style-type: none; padding-left: 0; margin-top: 1.5rem;">
+  {{/* Loops through your page resources or site publication details */}}
+  {{ range .context.Pages }}
+    <li class="citation-item" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dashed #eee;">
+      <!-- Main Citation Entry -->
+      <span class="citation-title" style="font-weight: 600; display: block; font-size: 1.1rem;">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </span>
+      
+      <!-- Optional Author Subtext Metadata -->
+      {{ if .Params.authors }}
+        <span class="citation-authors" style="color: var(--gray); font-size: 0.95rem; display: block; margin-top: 0.25rem;">
+          {{ delimit .Params.authors ", " }}
+        </span>
+      {{ end }}
+    </li>
+  {{ else }}
+    <p style="color: var(--gray); font-style: italic;">No publications found.</p>
+  {{ end }}
+</ul>

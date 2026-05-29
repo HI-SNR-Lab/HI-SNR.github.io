@@ -1,0 +1,79 @@
+<style>
+.portrait {
+  display: block !important;
+  text-align: left !important;
+}
+
+.portrait-name,
+.portrait-description,
+.portrait-affiliation {
+  display: block !important;
+  width: 100%;
+}
+
+.portrait-image {
+  display: block !important;
+  margin: 0 !important;
+}
+</style>
+
+{{/* 
+  1. CONTEXT SETUP
+  Handle whether this partial was called via lookup or passed a direct context.
+*/}}
+{{ $member := .context }}
+
+{{ if .lookup }}
+  {{/* Find the single markdown profile page where Params.slug matches our lookup */}}
+  {{ $membersSection := .context.Site.GetPage "section" "members" }}
+  {{ $found := where $membersSection.Pages "Params.slug" .lookup }}
+  {{ if $found }}
+    {{ $member = index $found 0 }}
+  {{ end }}
+{{ end }}
+
+{{/* 2. FETCH TYPE DATA */}}
+{{ $role := $member.Params.role }}
+{{ $type := index $member.Site.Data.types $role }}
+
+{{/* 3. HTML RENDERING */}}
+<div class="portrait-wrapper">
+  <a
+    {{ if ne $.context.Params.slug $member.Params.slug }}
+      href="{{ $member.RelPermalink }}"
+    {{ end }}
+    class="portrait"
+    data-style="{{ .style }}"
+    aria-label="{{ $member.Params.name | default "member link" }}"
+  >
+    <!-- {{ if $type }}
+      {{ partial "icon.html" (dict "icon" $type.icon) }}
+    {{ end }} -->
+
+    <img
+      src="{{ $member.Params.image | relURL }}"
+      class="portrait-image"
+      alt="member portrait"
+      loading="lazy"
+      {{ partial "fallback.html" . }}
+    >
+
+    {{ if $member.Params.name }}
+      <span class="portrait-name">
+        {{ $member.Params.name }}
+      </span>
+    {{ end }}
+
+    {{ if or $member.Params.description $type }}
+      <span class="portrait-description">
+        {{ $member.Params.description | default $type.description }}
+      </span>
+    {{ end }}
+
+    {{ if $member.Params.affiliation }}
+      <span class="portrait-affiliation">
+        {{ $member.Params.affiliation }}
+      </span>
+    {{ end }}
+  </a>
+</div>

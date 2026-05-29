@@ -2,9 +2,10 @@
 <h1>{{ .Title }}</h1>
 {{ .Content }}
 
-{{- $dataName := .data | default "citations" -}}
-{{- $pageContext := .context -}}
-{{- $citations := index $pageContext.Site.Data $dataName -}}
+{{- $dataName := "citations" -}}
+{{- $citations := index .Site.Data $dataName -}}
+
+<div class="citations-list-wrapper">
 
 <div class="citations-list-wrapper">
   <div class="citations-list" id="publications-target-list">

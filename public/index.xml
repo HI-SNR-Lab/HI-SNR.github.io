@@ -8,6 +8,104 @@
     <language>en-us</language>
     <atom:link href="http://localhost:8080/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Research</title>
+      <link>http://localhost:8080/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/austin-vera/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/austin-vera/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/carson-anderson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/carson-anderson/</guid>
+      <description>&lt;p&gt;Carson Anderson is a Master’s student at CU Boulder and a new member of the HI-SNR Lab, where he will be working on Synthetic Aperture Radar (SAR) analysis, exploitation, and change detection. His academic interests include remote sensing, SAR image processing, and machine learning for geospatial applications.&#xA;Previously, Carson conducted array signal processing research focused on near-field acoustic denoising, contributed to an NSF-funded project applying deep learning to inverter-based power grid operations, and worked on a wavelet-based denoising project for SAR imagery. He is also a member of the Critical Skills Master’s Fellowship at Sandia National Laboratories, where he developed embedded systems and user interfaces for triboelectric test equipment. He continues his fellowship at Sandia, currently supporting hardware-in-the-loop simulations for advanced radar environments.&#xA;As an undergraduate, he served as an engineering council representative for Tau Beta Pi at New Mexico State University, supporting outreach events, campus improvement projects, and student program funding efforts. Outside of research, Carson enjoys hiking, mountain biking, and exploring national parks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/christopher-barbarie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/christopher-barbarie/</guid>
+      <description>&lt;p&gt;Christopher Barbarie is a PhD student in the Electrical, Computer &amp;amp; Energy Engineering department at the University of Colorado Boulder. As a member of the HI SNR lab, he is developing radar systems and inversion algorithms to determine material and roughness conditions at the base of ice sheets. He earned his B.Sc in Physics with a minor in Computer Science at McGill University. Previously, Christopher conducted undergraduate radio astronomy research in the Canadian High Arctic where he developed and deployed radio frequency instrumentation. As an undergraduate, he also conducted research on determining sea level changes using GNSS receivers. His research interests lie at the intersection of radar engineering and glaciology. In his free time, Christopher enjoys hiking, bouldering, reading, and watching sports.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/colin-chow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/colin-chow/</guid>
+      <description>&lt;p&gt;Colin Chow is a sophomore Electrical and Computer Science student at the University of Colorado, Boulder, with an expected graduation date of 2028. He is currently an undergraduate researcher in Professor Bienert&amp;rsquo;s HI-SNR lab, adding functionality to the ORCA (Open Radar Code Architecture) codebase. This codebase is meant to allow widespread radar data collection on ice sheets and glaciers, and to make it easier for all cryosphere researchers to put together their own projects. He was previously the winner of a CU Boulder design expo contest, in which he helped create a wearable radar headband that could be used by blind people to detect obstacles in their way. His future plans are to pursue an accelerated master&amp;rsquo;s in electrical engineering and a minor in business. Colin&amp;rsquo;s academic interests are space exploration, artificial intelligence, and radar, and his hobbies outside of school include rock climbing, reading, and coding for fun.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/dhruva-anantha-datta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/dhruva-anantha-datta/</guid>
+      <description>&lt;p&gt;Dhruva (KF0UJO) is a Graduate student at the Ann &amp;amp; HJ Smead Department of Aerospace Engineering Sciences at the University of Colorado, Boulder. He is currently a researcher at HI SNR Lab. Before graduate school he served as a Scientist‑Engineer at Indian Space Research Organization’s Space Applications Center, leading the development of a digital‑beamforming GEO payload and devising polyphase channel‑reconstruction algorithms. He also led the CubeSat communications team and the INSPIRESat‑1 commissioning campaign at the Small Spacecraft Systems and Payload Centre (SSPACE) at the Indian Institute of Space Science and Technology, and a recipient of the Department of Space Scholarship (2018-2022). Dhruva’s interests span multi-static radar, small‑sat clusters and FPGA‑based real time processing, and—when away from the lab—he can be found making elegant PCB&amp;rsquo;s.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/edie-goldner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/edie-goldner/</guid>
+      <description>&lt;p&gt;Edie Goldner is a part of the summer program for undergraduate research and is developing code to be added to ORCA as well as building a radar system(peregrine) for the code to use used with. She is entering her second year of electrical engineering with a minor in leadership studies. Edie is a member of Tau Beta Pi, received a scholarship from the society of women engineers, and is captain of the club dive team at the University of Colorado, Boulder. She participated in a first-year engineering projects course and designed an educational robot to teach young kids about STEM and won first place at the design expo. Edie is interested in incorporating environmental aspect into electrical engineering, electronics, and microelectronics. She also enjoys hiking, skiing, traveling, cooking, and going to concerts in her free time. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/eric-gosnell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/eric-gosnell/</guid>
+      <description>&lt;p&gt;Eric Gosnell is a fourth-year Computer Science student at the University of Colorado Boulder, with a minor in Computer Engineering and a certificate in Geographic Information Science. He is currently an undergraduate Research Assistant in the Imaging and Multistatic-radar Group where he is developing both the open-source software platform and physical hardware for an ice-penetrating, software-defined radar system. Previously, Eric worked as a Snow Hydrology Research Intern with the Institute of Arctic and Alpine Research measuring snow stratigraphy data in remote, high elevation locations. He is primarily interested in cryospheric and geoscientific applications of computer science and electrical engineering. Eric has received multiple scholarships, including the Horace M. Hale Esteemed Scholar Award. After graduation, he intends to pursue his M.S. in Computer Science from the University of Colorado Boulder, which is expected in May of 2027.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/irati-ortuondo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/irati-ortuondo/</guid>
+      <description>&lt;p&gt;Irati Ortuondo is a final-year Telecommunications Engineering student working on her bachelor’s thesis in the Hi-SNR lab. Her research focuses on combining radiometer and radar measurements to improve the estimation of vegetation water content and enhance the monitoring of wildfires.&#xA;Throughout her studies, Irati has developed a strong background in telecommunications systems, signal processing, and data analysis. She is passionate about combining engineering principles with real-world applications to design innovative and efficient communication solutions.&#xA;Outside of her academic work, Irati enjoys sports, spending time with friends and dancing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/liza-gunther/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/liza-gunther/</guid>
+      <description>&lt;p&gt;Liza Gunther is a master’s student in Electrical, Computer &amp;amp; Energy Engineering at the University of Colorado. In the HI SNR lab, she is researching how to better estimate water resources stored in snow by using synthetic aperture radar. Prior to graduate school, she worked as a staff scientist at Quantum Catalyzer, where she contributed to the development and commercialization of quantum sensors, primarily for wide-field magnetic field imaging. Liza earned her B.S. in Physics with high honors and a minor in Sustainability from the University of Maryland (UMD). As an undergraduate, she researched nitrogen-vacancy centers and the design capabilities of the Quantum Diamond Microscope at the Institute of Optics and in the Walsworth Group at UMD. She also researched the electrostatics of few-atom quantum devices at the National Institute of Standards and Technology. Liza has a strong interest in applying optical and RF technologies to environmental sensing. In her free time, you can find her drinking chai lattes, swimming, biking, and re-learning how to run. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/nicole-bienert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/nicole-bienert/</guid>
+      <description>&lt;p&gt;Nicole Bienert is an Assistant Professor of Electrical, Computer &amp;amp; Energy Engineering at the University of Colorado, Boulder and the PI of the Imaging and Multistatic-radar Group. She previously was a postdoctoral scholar at the University of California, researching drone-based soil moisture tomography under Mahta Moghaddam. Nicole spent time in industry, developing equitable imaging algorithms at Google as a member of the Pixel team. Nicole received her Ph.D. in electrical engineering from Stanford University under Dustin Schroeder, a radar glaciology expert, where she researched Multistatic Radar Tomography for estimating englacial thermal distributions. Her work earned the 2020 IGARSS Prize Paper Award and an NSF Graduate Research Fellowship. Nicole spent time as a Visiting Graduate Researcher with the Jet Propulsion Laboratory, where she investigated orthogonal-wave beamforming for a CubeSat swarm sounder. Nicole received her B.S. degree (cum laude) in electrical engineering with a minor in physics from the Schreyer Honors College at The Pennsylvania State University. During undergraduate internships at the Jet Propulsion Laboratory, Nicole researched resonance radar imaging for estimating aquifer volume and developed an inflatable antenna to enable deep-space CubeSats.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/olivia-egbert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/olivia-egbert/</guid>
+      <description>&lt;p&gt;Olivia is a Master&amp;rsquo;s student studying Electrical Engineering at the University of Colorado, Boulder with a focus in Remote Sensing. Her independent study project at High SNR lab explores how multi-static radar tomography can be used to characterize moisture penetration in soil, with future applications in agricultural crop monitoring and management. Previously she was team leader of the &amp;ldquo;K-Bandits&amp;rdquo;, a research group studying Radio Frequency Interference in protected frequency bands at the Center for Environmental Technology under guidance of Professor Albin Gasiewski.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/piper-morison/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/piper-morison/</guid>
+      <description>&lt;p&gt;Piper Morison is an undergraduate Electrical Engineering student at the University of Colorado Boulder, expected to graduate in 2028 and then pursue an accelerated master’s in the same field. She is currently an undergraduate researcher with the HI-SNR Lab, where she is developing and integrating features for the open-source ORCA radar codebase used in cryosphere research. Piper was also active in the Photon Pioneers project group, where she helped design a low-power Safe Light Sensing System that alerts users with photophobia to hazardous ambient light levels.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:8080/members/zoe-worrall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8080/members/zoe-worrall/</guid>
+      <description>&lt;p&gt;Zoe Worrall is a PhD student in the Electrical, Computer &amp;amp; Energy Engineering department at the University of Colorado Boulder. Within the HI SNR lab, she is developing an inversion algorithm and hardware system to determine water content within trees. She received a B.S. in Engineering from Harvey Mudd College. During her undergraduate degree, she conducted research using biophotonic systems, working on the in-vivo imaging system openIVIS and developing a system to perform off-axis holography for a neural imaging device. She has to programmed Ettus and AMD software defined radios through her past work with MIT Lincoln Laboratories as a summer intern and through the Harvey Mudd Clinic Program. In addition, she acted as a team lead during her senior year to develop the QuACK Overlay for HRL Laboratory&amp;rsquo;s Quantum Instrumentation Control Kit. Zoe&amp;rsquo;s research interests lie in the realm of signal processing and FPGA programming. In her free time, she can be found bouldering, drawing, playing Dungeons and Dragons, or skiing with friends.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Join</title>
       <link>http://localhost:8080/join/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -26,7 +124,7 @@
       <link>http://localhost:8080/team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:8080/team/</guid>
-      <description>&lt;style&gt;&#xA;  .team-grid {&#xA;    display: flex;&#xA;    flex-wrap: wrap;&#xA;    gap: 20px;&#xA;    align-items: flex-start;&#xA;  }&#xA;&#xA;  h1, h2 {&#xA;    margin-top: 4px !important;&#xA;    margin-bottom: 4px !important;&#xA;  }&#xA;&#xA;  .section-divider {&#xA;    margin: 4px 0 !important;&#xA;    padding: 4;&#xA;  }&#xA;&#xA;  .section-pi {&#xA;    display: flex;&#xA;    margin-left: 4px 0 !important;&#xA;    flex-direction: column;&#xA;    align-items: center;&#xA;    text-align: center;&#xA;    width: 100vw;&#xA;    margin-left: calc(-50vw + 50%);&#xA;    padding: 0px 0;&#xA;    background: #eef2ff&#xA;  }&#xA;&#xA;  .section-grad {&#xA;    display: flex;&#xA;    flex-direction: column;&#xA;&#xA;    width: 100vw;&#xA;    margin-left: calc(50% - 50vw);&#xA;&#xA;    padding: 20px 80px;&#xA;    box-sizing: border-box;&#xA;&#xA;    align-items: flex-start;&#xA;    text-align: left;&#xA;&#xA;    background: #ddddee;&#xA;  }&#xA;&#xA;  .section-undergrad {&#xA;    display: flex;&#xA;    flex-direction: column;&#xA;&#xA;    width: 100vw;&#xA;    margin-left: calc(50% - 50vw);&#xA;&#xA;    padding: 20px 80px;&#xA;    box-sizing: border-box;&#xA;&#xA;    align-items: flex-start;&#xA;    text-align: left;&#xA;&#xA;    background: #eef1ff;&#xA;  }&#xA;&#xA;  .section-alumni {&#xA;    display: flex;&#xA;    flex-direction: column;&#xA;&#xA;    width: 100vw;&#xA;    margin-left: calc(50% - 50vw);&#xA;&#xA;    padding: 20px 80px;&#xA;    box-sizing: border-box;&#xA;&#xA;    align-items: flex-start;&#xA;    text-align: left;&#xA;&#xA;    background: #ddddee;&#xA;  }&#xA;&#xA;  .section-past {&#xA;    display: flex;&#xA;    flex-direction: column;&#xA;&#xA;    width: 100vw;&#xA;    margin-left: calc(50% - 50vw);&#xA;&#xA;    padding: 20px 80px;&#xA;    box-sizing: border-box;&#xA;&#xA;    align-items: flex-start;&#xA;    text-align: left;&#xA;&#xA;    background: #eef2ff;&#xA;  }&#xA;&#xA;  /* .section {&#xA;    width: 100vw;&#xA;    margin-left: calc(-50vw + 50%);&#xA;    padding: 30px 0;&#xA;  } */&#xA;&lt;/style&gt;&#xA;&#xA;&#xA;# {% include icon.html icon=&#34;fa-solid fa-users&#34; %}Team&#xA;&#xA;At HI-SNR Lab, we believe that a joyful and inclusive environment drives innovation. Our team is dedicated to collaboration and creativity, celebrating our differences, and supporting one another. Join us on our journey to bring new imaging systems and methods to our communities!&#xA;&#xA;{{ partial &#34;section.html&#34; }}&#xA;&#xA;&lt;div class=&#34;section section-pi&#34;&gt; &#xA;  &lt;div class=&#34;inner&#34;&gt; &#xA;    &lt;h2 class=&#34;section-title&#34;&gt;Principal Investigator&lt;/h2&gt;&#xA;    &lt;div class=&#34;team-grid&#34;&gt;&#xA;      {% for member in site.members %} {% if member.role == &#34;pi&#34; %}&#xA;        &lt;div class=&#34;team-member&#34;&gt; {% include portrait.html lookup=member.slug %} &lt;/div&gt;&#xA;      {% endif %} {% endfor %}  &#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt; &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;section section-grad&#34;&gt; &#xA;  &lt;div class=&#34;inner&#34;&gt; &#xA;    &lt;h2 class=&#34;section-title&#34;&gt;Graduate Students&lt;/h2&gt;&#xA;    &lt;div class=&#34;team-grid&#34;&gt;&#xA;      {% for member in site.members %} {% if member.role == &#34;grad&#34; %}&#xA;        &lt;div class=&#34;team-member&#34;&gt; {% include portrait.html lookup=member.slug %} &lt;/div&gt;&#xA;      {% endif %} {% endfor %}  &#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt; &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;section section-undergrad&#34;&gt; &#xA;  &lt;div class=&#34;inner&#34;&gt; &#xA;    &lt;h2 class=&#34;section-title&#34;&gt;Undergraduate Students&lt;/h2&gt;&#xA;    &lt;div class=&#34;team-grid&#34;&gt;&#xA;      {% for member in site.members %} {% if member.role == &#34;undergrad&#34; %}&#xA;        &lt;div class=&#34;team-member&#34;&gt; {% include portrait.html lookup=member.slug %} &lt;/div&gt;&#xA;      {% endif %} {% endfor %}  &#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt; &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;section section-alumni&#34;&gt; &#xA;  &lt;div class=&#34;inner&#34;&gt; &#xA;    &lt;h2 class=&#34;section-title&#34;&gt;Alumni&lt;/h2&gt;&#xA;    &lt;div class=&#34;team-grid&#34;&gt;&#xA;      {% for member in site.members %} {% if member.role == &#34;alumni&#34; %}&#xA;        &lt;div class=&#34;team-member&#34;&gt; {% include portrait.html lookup=member.slug %} &lt;/div&gt;&#xA;      {% endif %} {% endfor %}  &#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt; &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;section section-past&#34;&gt; &#xA;  &lt;div class=&#34;inner&#34;&gt; &#xA;    &lt;h2 class=&#34;section-title&#34;&gt;Past Students&lt;/h2&gt;&#xA;    &lt;div class=&#34;team-grid&#34;&gt;&#xA;      {% for member in site.members %} {% if member.role == &#34;past&#34; %}&#xA;        &lt;div class=&#34;team-member&#34;&gt; {% include portrait.html lookup=member.slug %} &lt;/div&gt;&#xA;      {% endif %} {% endfor %}  &#xA;    &lt;/div&gt;&#xA;  &lt;/div&gt; &#xA;&lt;/div&gt;</description>
+      <description></description>
     </item>
   </channel>
 </rss>

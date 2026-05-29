@@ -9,3 +9,21 @@
   {{- $style := resources.Get "scss/style.scss" | toCSS | minify | fingerprint -}}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
 {{- end -}}
+
+{{/* 
+  1. GLOB & COLLECT ALL SCSS FILES
+  Hugo looks inside assets/scss/ and grabs every single file ending in .scss
+*/}}
+{{ $allScssFiles := resources.Match "scss/*.scss" }}
+
+{{ if $allScssFiles }}
+  {{/* 
+    2. CONCATENATE & COMPILE THE BUNDLE
+    Hugo physically glues all 25 files into one massive string, 
+    compiles it to CSS, squishes it down, and caches it.
+  */}}
+  {{ $bundled := $allScssFiles | resources.Concat "css/bundle.scss" | toCSS | minify | fingerprint }}
+  <link href="{{ $bundled.Permalink }}" rel="stylesheet" />
+{{ else }}
+  <script>console.warn("Hugo Pipeline Warning: No files found in assets/scss/")</script>
+{{ end }}
