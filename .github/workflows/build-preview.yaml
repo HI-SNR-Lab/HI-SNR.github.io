@@ -1,0 +1,36 @@
+name: build-preview
+run-name: build pull request preview
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch contents
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
+          submodules: recursive
+
+      - name: Install Hugo
+        run: |
+          sudo apt-get update && sudo apt-get install -y hugo
+
+      - name: Build preview version of site
+        run: |
+          hugo --minify --baseURL="http://localhost/"
+
+      - name: Upload PR Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview-build
+          path: ./public

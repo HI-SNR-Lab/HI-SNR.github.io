@@ -1,0 +1,44 @@
+name: build-site
+run-name: build live site
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch contents
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Hugo
+        uses: actions/configure-pages@v5 # Official tool to help set up Hugo paths
+
+      - name: Install Hugo
+        run: |
+          sudo apt-get update && sudo apt-get install -y hugo
+
+      - name: Set root url
+        run: |
+          printf "\nbaseURL = '%s'\n" "${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path || '/' }}" >> hugo.toml
+
+      - name: Build live version of site
+        run: |
+          hugo --minify
+
+      - name: Upload compiled site files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - name: Deploy directly to GitHub Pages
+        uses: actions/deploy-pages@v4
