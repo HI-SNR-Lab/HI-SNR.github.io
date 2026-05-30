@@ -16,9 +16,6 @@ permissions:
   id-token: write
 
 jobs:
-  update-citations:
-    uses: ./.github/workflows/update-citations.yaml
 
   build-preview:
-    needs: update-citations
     uses: ./.github/workflows/build-preview.yaml
