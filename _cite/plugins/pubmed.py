@@ -1,7 +1,7 @@
 import json
 from urllib.request import Request, urlopen
 from urllib.parse import quote
-from _cite.util import *
+from util import *
 
 
 def main(entry):

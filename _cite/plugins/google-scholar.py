@@ -1,6 +1,6 @@
 import os
 from serpapi import GoogleSearch
-from _cite.util import *
+from util import *
 
 
 def main(entry):

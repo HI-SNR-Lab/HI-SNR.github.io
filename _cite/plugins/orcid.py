@@ -1,6 +1,6 @@
 import json
 from urllib.request import Request, urlopen
-from _cite.util import *
+from util import *
 from manubot.cite.handlers import prefix_to_handler as manubot_prefixes
 
 
