@@ -133,7 +133,7 @@ main img {
   max-width: 100% ; /* Locks the image width to never exceed its container box */
   height: auto ;     /* Auto-calculates height to maintain original proportions */
   display: block;
-  margin: 1.5rem auto;         /* Centers the image cleanly with vertical separation padding */
+  margin: 1.0rem auto;         /* Centers the image cleanly with vertical separation padding */
   border-radius: var(--rounded, 4px); /* Applies your theme's clean rounded corners */
 }
 

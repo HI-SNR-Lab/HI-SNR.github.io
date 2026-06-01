@@ -66,7 +66,7 @@
 </noscript>
 
   
-<link href="/css/pygments.css" rel="stylesheet" /><link href="http://localhost:8080/scss/bundle.min.229a319a336209efe39c226dbb0dc5f4fe0c980ca475bbbf6e3a44b96a6bd3c3.css" rel="stylesheet" />
+<link href="/css/pygments.css" rel="stylesheet" /><link href="http://localhost:8080/scss/bundle.min.f7914203e8ed6708c3d0a5301dd2ff102c9881b02778aabf6b87ec0c4749e7da.css" rel="stylesheet" />
   
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
 <script src="https://unpkg.com/tippy.js@6" defer></script>
@@ -82,130 +82,190 @@
   style="--image: url('/images/background.jpg')"
   data-dark="true"
 >
-  <a href="/" class="home">
-    
-    
-      <span class="logo">
-          
-          <img src="/images/logo.png" alt="logo" class="tiny-site-logo">
-      </span>
-      <span class="title-text" data-tooltip="Home" style="display: flex; flex-direction: column; justify-content: center;">
-          <span class="title" style="font-family: var(--title), 'Barlow', sans-serif; font-weight: var(--bold, 600); font-size: 1.5rem; color: var(--text); line-height: 1.2;">
-            HI SNR Lab
-          </span>
-      </span>
-  </a>
+  
+  
+    <a href="/" class="home">
+        <span class="logo">
+            <img src="/images/logo.png" alt="logo" class="tiny-site-logo">
+        </span>
+        <span class="title-text" data-tooltip="Home" style="display: flex; flex-direction: column; justify-content: center;">
+            <span class="title" style="font-family: var(--title), 'Barlow', sans-serif; font-weight: var(--bold, 600); font-size: 1.5rem; color: var(--text); line-height: 1.2;">
+              HI SNR Lab
+            </span>
+        </span>
+    </a>
 
-  <nav class="nav-menu">
-    <ul>
-      
-      
+    <nav class="nav-menu">
+      <ul>
         <li class="nav-item">
-          
-          <a href="/" 
-            title="Home" 
-            class="">
-            Home
-          </a>
-        </li>
-      
-        <li class="nav-item">
-          
-          <a href="/research/" 
-            title="Research" 
-            class="active">
-            Research
-          </a>
-        </li>
-      
-        <li class="nav-item">
-          
-          <a href="/projects/" 
-            title="Projects" 
-            class="">
-            Projects
-          </a>
-        </li>
-      
-        <li class="nav-item">
-          
-          <a href="/join/" 
-            title="Join" 
-            class="">
-            Join
-          </a>
-        </li>
-      
-        <li class="nav-item">
-          
-          <a href="/team/" 
-            title="Team" 
-            class="">
-            Team
-          </a>
-        </li>
-      
-    </ul>
-  </nav>
-
-
-
+              <a href="/research/" title="Research" class="active">
+                Research
+              </a>
+            </li><li class="nav-item">
+              <a href="/publications/" title="Publications" class="">
+                Publications
+              </a>
+            </li><li class="nav-item">
+              <a href="/projects/" title="Projects" class="">
+                Projects
+              </a>
+            </li><li class="nav-item">
+              <a href="/join/" title="Join" class="">
+                Join
+              </a>
+            </li><li class="nav-item">
+              <a href="/team/" title="Team" class="">
+                Team
+              </a>
+            </li>
+      </ul>
+    </nav>
 
 </header>
 
 <style>
  
 header.site-header {
-  width: 100% !important;
-  background-image: var(--image) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  
-   
-  min-height: 120px !important; 
-  height: 120px !important;
-  
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 0 40px !important;
-  box-sizing: border-box !important;
+  width: 100%;
+  background-image: var(--image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 120px; 
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
- 
 header.site-header[data-big] {
-  min-height: 180px !important;
-  height: 180px !important;
+  min-height: 180px;
+  height: 180px;
 }
 
- 
 header.site-header .home {
-  display: flex !important;
-  align-items: center !important;
-  text-decoration: none !important;
-  gap: 15px !important;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 15px;
+}
+
+.tiny-site-logo, .inline-svg-logo svg {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
  
-.tiny-site-logo {
-  height: 40px !important;
-  width: auto !important;
-  object-fit: contain !important;
-  display: block !important;
+header.site-header.is-homepage-hero {
+  min-height: 280px;  
+  height: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.inline-svg-logo svg {
-  height: 40px !important;
-  width: auto !important;
-  display: block !important;
+.homepage-centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.homepage-branding {
+  flex-direction: column !important;  
+  gap: 12px !important;
+  margin-bottom: 20px;
+}
+
+ 
+.big-home-title {
+  font-family: var(--title), 'Barlow', sans-serif; 
+  font-weight: var(--bold, 700); 
+  font-size: 2.8rem !important;  
+  color: var(--text); 
+  line-height: 1.1;
+}
+
+.big-home-subtitle {
+  font-family: var(--body), 'Barlow', sans-serif; 
+  font-weight: var(--regular, 400); 
+  font-size: 1.2rem !important; 
+  color: var(--gray); 
+  line-height: 1.3; 
+  margin-top: 8px;
+}
+
+.big-home-logo, .big-home-svg svg {
+  height: 65px !important;  
+  width: auto;
+}
+
+ 
+.centered-nav-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+ 
+.nav-menu a:hover {
+  color: #0056b3 !important;  
+}
+
+header + main,
+.intro-description,
+[class*="intro"],
+[class*="hero"],
+[class*="title-wrapper"] {
+  gap: 4px;
+  row-gap: 4px;
+}
+
+h1, 
+.lab-sub-disciplines,
+.intro-description p {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 </style>
+
     
     <main>
       
 
 <div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+    <h1 class="page-title">Research</h1>
 
   <p>The High-quality Imaging, Signals, N' Radar (HI-SNR) laboratory develops data assimilation, computational imaging, and signal processing methods in two areas:</p>
 
@@ -213,8 +273,18 @@ header.site-header .home {
   <summary style="font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; font-size: 1.1rem; color: #1a1a1a;">
     1. Multistatic Radar for Environmental Applications
   </summary>
-  <div class="accordion-content" style="padding: 1rem 0 0.5rem 0; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem;">
-    Your nested accordion body content descriptions go here.
+  <div class="accordion-content" style="text-align: left; padding: 1rem 2.5rem 0.5rem 1.5rem; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem; margin-side: 0.5rem;">
+    <p>We develop multistatic radars and algorithms for retreiving properties of the environment for the following purposes:</p>
+<ol>
+<li>
+<p>Equip scientists with the tools needed to improve our understanding of the environment. We develop radar-based methods for making measurements of environmental processes at a quality or scale that is not possible with existing tools. This includes projects such as generating 2D maps of the temperature distribution inside glaciers.</p>
+</li>
+<li>
+<p>Develop systems than enable resource monitoring and improved resource management. This includes projects such as monitoring soil moisture for improved irrigaiton practices.<br>
+We are a crib to grave team that puts environmental solutions into the hands of scientists and and environmental agencies.</p>
+</li>
+</ol>
+
   </div>
 </details>
 
@@ -224,25 +294,18 @@ header.site-header .home {
   <summary style="font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; font-size: 1.1rem; color: #1a1a1a;">
     2. Computational Photography
   </summary>
-  <div class="accordion-content" style="padding: 1rem 0 0.5rem 0; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem;">
+  <div class="accordion-content" style="text-align: left; padding: 1rem 2.5rem 0.5rem 1.5rem; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem; margin-side: 0.5rem;">
     We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data.
   </div>
 </details>
 
-
-  
-</div>
-</section>
-
-<section class="site-section-divider section-light-bg">
-  <div class="section-inner-wrapper">
 
   <h2>Research Areas in Computational Photography</h2>
 
   
      <div class="feature" data-flip="true">
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Equitable Imaging"
   >
@@ -257,7 +320,7 @@ header.site-header .home {
     
       <p class="feature-title">Equitable Imaging</p>
     
-    <p>We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
+    <p>We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/publications/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> 
   </div>
 </div>
 
@@ -265,7 +328,7 @@ header.site-header .home {
   
      <div class="feature" >
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Behavioral Studies for Improved Imaging"
   >
@@ -289,7 +352,7 @@ header.site-header .home {
   
      <div class="feature" data-flip="true">
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Compressive Sensing"
   >
@@ -314,7 +377,7 @@ header.site-header .home {
   
      <div class="feature" data-flip="true">
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Cryosphere Radars"
   >
@@ -337,7 +400,7 @@ header.site-header .home {
   
      <div class="feature" data-flip="true">
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Biosphere Radar"
   >
@@ -360,7 +423,7 @@ header.site-header .home {
     
      <div class="feature" data-flip="true">
   <a
-    href="/research"
+    
     class="feature-image"
     aria-label="Near Subsurface Radar"
   >
@@ -389,7 +452,7 @@ header.site-header .home {
 
   <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
     <iframe 
-      src="https://youtube.com" 
+      src="https://www.youtube.com/embed/WaF6N42GQiw?si=peiCi045mLVfM2el&amp;controls=0&amp;start=23" 
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
@@ -429,12 +492,362 @@ header.site-header .home {
   <span id="site-search-counter-text">Showing all items</span>
 </div>
 
-  <ul class="citation-list" style="list-style-type: none; padding-left: 0; margin-top: 1.5rem;">
+  <div class="citations-list-wrapper" style="margin-top: 20px;">
+<div class="citations-list" id="publications-target-list">
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="polarimetric multi-offset radio-echo sounding with a radio frequency-over-fiber apres system daniel f. may dustin m. schroeder paul t. summers thomas o. teisberg anna l. broome nicole l. bienert jaiden zak tun jan young marianne s. karplus slawek m. tulaczyk  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/hbmczn" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Polarimetric multi-offset radio-echo sounding with a radio frequency-over-fiber ApRES system
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Daniel F. May, Dustin M. Schroeder, Paul T. Summers, Thomas O. Teisberg, Anna L. Broome, Nicole L. Bienert, Jaiden Zak, Tun Jan Young, Marianne S. Karplus, Slawek M. Tulaczyk</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2025-12-12</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="radar polarimetry in glaciology: theory, measurement techniques, and scientific applications for investigating the anisotropy of ice masses benjamin h. hills t. j. young david a. lilien esther babcock nicole bienert donald blankenship john bradford giancorrado brighi alex brisbourne jørgen dall reinhard drews olaf eisen m. reza ershadi tamara a. gerber nicholas holschuh daniela jansen thomas m. jordan nanna b. karlsson jilu li carlos martín kenichi matsuoka daniel may falk m. oraschewski john paden nicholas m. rathmann neil ross dustin m. schroeder martin siegert matthew r. siegfried emma smith ole zeising  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g99tx6" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Radar Polarimetry in Glaciology: Theory, Measurement Techniques, and Scientific Applications for Investigating the Anisotropy of Ice Masses
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Benjamin H. Hills, T. J. Young, David A. Lilien, Esther Babcock, Nicole Bienert, Donald Blankenship, John Bradford, Giancorrado Brighi, Alex Brisbourne, Jørgen Dall, Reinhard Drews, Olaf Eisen, M. Reza Ershadi, Tamara A. Gerber, Nicholas Holschuh, Daniela Jansen, Thomas M. Jordan, Nanna B. Karlsson, Jilu Li, Carlos Martín, Kenichi Matsuoka, Daniel May, Falk M. Oraschewski, John Paden, Nicholas M. Rathmann, Neil Ross, Dustin M. Schroeder, Martin Siegert, Matthew R. Siegfried, Emma Smith, Ole Zeising</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2025-11-02</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="a concept for multistatic radar tomography of crop root zone soil moisture nicole bienert mahta moghaddam  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pz27" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                A Concept For Multistatic Radar Tomography Of Crop Root Zone Soil Moisture
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Nicole Bienert, Mahta Moghaddam</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2024-07-07</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="bistatic radar tomography of shear margins: simulated temperature and basal material inversions nicole bienert dustin m. schroeder paul summers  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8n25g" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Bistatic Radar Tomography of Shear Margins: Simulated Temperature and Basal Material Inversions
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Nicole Bienert, Dustin M. Schroeder, Paul Summers</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2023-01-01</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="processing and detecting artifacts in multi-input multi-output phase-sensitive ice penetrating radar data akua a. mcleod sean t. peters riley culberg dustin m. schroeder nicole l. bienert winnie chu tun jan young poul christoffersen  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8n7ss" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Processing and Detecting Artifacts in Multi-Input Multi-Output Phase-Sensitive ICE Penetrating Radar Data
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Akua A. McLeod, Sean T. Peters, Riley Culberg, Dustin M. Schroeder, Nicole L. Bienert, Winnie Chu, Tun Jan Young, Poul Christoffersen</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2022-07-17</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="sfmcw orthogonal wave beamforming concept for distributed orbital sounding nicole bienert mark s. haynes dustin m. schroeder robert m. beauchamp  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8n7st" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                SFMCW Orthogonal Wave Beamforming Concept for Distributed Orbital Sounding
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Nicole Bienert, Mark S. Haynes, Dustin M. Schroeder, Robert M. Beauchamp</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2022-07-17</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="side-facing uhf-band radar system to monitor tree water status krishna rao yesenia j. ulloa nicole bienert nona r. chiariello natan m. holtzman gregory r. quetin sean t. peters keith winstein davide castelletti dustin m. schroeder alexandra g. konings  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g7pkmp" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Side-Facing UHF-Band Radar System to Monitor Tree Water Status
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Krishna Rao, Yesenia J. Ulloa, Nicole Bienert, Nona R. Chiariello, Natan M. Holtzman, Gregory R. Quetin, Sean T. Peters, Keith Winstein, Davide Castelletti, Dustin M. Schroeder, Alexandra G. Konings</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2022-07-17</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="post-processing synchronized bistatic radar for long offset glacier sounding nicole l. bienert dustin m. schroeder sean t. peters emma j. mackie eliza j. dawson matthew r. siegfried rohan sanda poul christoffersen  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8n25h" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Post-Processing Synchronized Bistatic Radar for Long Offset Glacier Sounding
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Nicole L. Bienert, Dustin M. Schroeder, Sean T. Peters, Emma J. MacKie, Eliza J. Dawson, Matthew R. Siegfried, Rohan Sanda, Poul Christoffersen</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2022-01-01</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="debris: distributed element beamformer radar for ice and subsurface sounding mark s. haynes robert m. beauchamp ala khazendar rayan mazouz marco b. quadrelli paolo focardi richard e. hodges william bertiger nicole bienert  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pz28" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Debris: Distributed Element Beamformer Radar for Ice and Subsurface Sounding
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Mark S. Haynes, Robert M. Beauchamp, Ala Khazendar, Rayan Mazouz, Marco B. Quadrelli, Paolo Focardi, Richard E. Hodges, William Bertiger, Nicole Bienert</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2021-07-11</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="glaciological constraints on link budgets for orbital radar sounding of earth&#39;s ice sheets dustin m. schroeder nicole l. bienert riley culberg emma j. mackie thomas o. teisberg winnie chu duncan a. young  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g6stmt" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Glaciological Constraints on Link Budgets for Orbital Radar Sounding of Earth&#39;s ICE Sheets
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Dustin M. Schroeder, Nicole L. Bienert, Riley Culberg, Emma J. MacKie, Thomas O. Teisberg, Winnie Chu, Duncan A. Young</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2021-07-11</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="inferring ice fabric from birefringence loss in airborne radargrams: application to the eastern shear margin of thwaites glacier, west antarctica t. j. young d. m. schroeder t. m. jordan p. christoffersen s. m. tulaczyk r. culberg n. l. bienert  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g78n3v" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Inferring Ice Fabric From Birefringence Loss in Airborne Radargrams: Application to the Eastern Shear Margin of Thwaites Glacier, West Antarctica
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">T. J. Young, D. M. Schroeder, T. M. Jordan, P. Christoffersen, S. M. Tulaczyk, R. Culberg, N. L. Bienert</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2021-05-01</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="processing-based synchronization approach for bistatic radar glacial tomography nicole l. bienert dustin m. schroeder sean t. peters matthew r. siegfried  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pz3b" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Processing-Based Synchronization Approach for Bistatic Radar Glacial Tomography
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Nicole L. Bienert, Dustin M. Schroeder, Sean T. Peters, Matthew R. Siegfried</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2020-09-26</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="inflatable antenna for cubesat: a new spherical design for increased x-band gain alessandra babuscia jonathan sauder aman chandra jekan thangavelautham lorenzo feruglio nicole bienert  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pwjd" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Inflatable antenna for CubeSat: A new spherical design for increased X-band gain
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Alessandra Babuscia, Jonathan Sauder, Aman Chandra, Jekan Thangavelautham, Lorenzo Feruglio, Nicole Bienert</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2017-03-01</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="multi-offset radio-echo sounding for estimation of englacial and subglacial thermal conditions and material properties daniel may dustin schroeder paul summers thomas teisberg anna broome nicole bienert  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pz3c" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Multi-Offset Radio-Echo Sounding for Estimation of Englacial and Subglacial Thermal Conditions and Material Properties
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Daniel May, Dustin Schroeder, Paul Summers, Thomas Teisberg, Anna Broome, Nicole Bienert</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2025-01-20</strong></span>
+          </p>
+
+      </div>
+      
+      
+      <div class="citation-item-card" 
+           data-search-pool="polarimetric radar-sounding to infer and quantify shear margin ice fabric anisotropy tun jan young thomas m jordan carlos martín dustin m schroeder poul christoffersen slawek m tulaczyk riley culberg nicole l bienert  "
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <a href="https://doi.org/g8pz3d" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                Polarimetric radar-sounding to infer and quantify shear margin ice fabric anisotropy
+              </a>
+            </strong>
+          </p>
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">Tun Jan Young, Thomas M Jordan, Carlos Martín, Dustin M Schroeder, Poul Christoffersen, Slawek M Tulaczyk, Riley Culberg, Nicole L Bienert</p>
+
+        
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>2021-03-03</strong></span>
+          </p>
+
+      </div>
   
   
-    <p style="color: var(--gray); font-style: italic;">No publications found.</p>
-  
-</ul>
+
+</div>
+</div>
+
+
+
+<script>
+var siteSearchInput = document.getElementById("site-search-input");
+var siteSearchClearBtn = document.getElementById("site-search-clear-btn");
+var siteSearchCounter = document.getElementById("site-search-counter-text");
+var citationCards = document.querySelectorAll("#publications-target-list .citation-item-card");
+
+function updateSearchInfo(query, count) {
+if (!siteSearchCounter) return;
+if (query === "") {
+  siteSearchCounter.textContent = "Showing all " + citationCards.length + " items";
+  if (siteSearchClearBtn) siteSearchClearBtn.disabled = true;
+} else {
+  siteSearchCounter.textContent = "Found " + count + " matching results out of " + citationCards.length + " items";
+  if (siteSearchClearBtn) siteSearchClearBtn.disabled = false;
+}
+}
+
+if (citationCards.length > 0) {
+updateSearchInfo("", citationCards.length);
+}
+
+function onSearchInput(inputElement) {
+var query = inputElement.value.toLowerCase().trim();
+var matchCount = 0;
+
+citationCards.forEach(function(card) {
+  var pool = card.getAttribute("data-search-pool") || "";
+  if (query === "" || pool.indexOf(query) !== -1) {
+    card.style.display = "block";
+    matchCount++;
+  } else {
+    card.style.display = "none";
+  }
+});
+
+updateSearchInfo(query, matchCount);
+}
+
+function onSearchClear() {
+if (siteSearchInput) {
+  siteSearchInput.value = "";
+  onSearchInput(siteSearchInput);
+  siteSearchInput.focus();
+}
+}
+</script>
 
 
 </div>

@@ -1,0 +1,99 @@
+{{ $citation := dict }}
+
+{{ if .lookup }}
+  {{ $matches := where .Site.Data.citations "id" "==" .lookup }}
+  {{ if not $matches }}
+    {{ $matches = where .Site.Data.citations "title" "like" .lookup }}
+  {{ end }}
+  {{ $citation = index $matches 0 }}
+{{ else }}
+  {{ $citation = . }}
+{{ end }}
+
+
+<div class="citation-container">
+  <div class="citation">
+    {{ if eq .style "rich" }}
+        <a
+            {{ if .citation.link }}
+            href="{{ .citation.link | relURL }}"
+            {{ end }}
+            class="citation-image"
+            aria-label="{{ .citation.title | default "citation link" }}"
+        >
+            <img
+            src="{{ .citation.image | relURL }}"
+            alt="{{ .citation.title | default "citation image" }}"
+            loading="lazy"
+            {{ partial "fallback.html" . }}
+            >
+        </a>
+        {{ end }}
+
+
+    <div class="citation-text">
+      {{ $type := index .Site.Data.types $citation.type }}
+      {{ partial "icon.html" (dict "icon" $type.icon) }}
+
+      <a {{ if .link }}  href="{{ .link | relURL }}" {{ end }} class="citation-title" >
+            {{ .Title | default "[no title info]" }}
+      </a>
+
+      <div
+        class="citation-authors"
+        {{ if gt (len .authors) 10 }}
+            data-tooltip="{{ delimit .authors ", " }}"
+        {{ end }}
+        tabindex="0"
+        >
+        {{ if .authors }}
+            {{ $first_five := first 5 .authors }}
+            {{ delimit $first_five ", " | markdownify | replaceRE "^<p>|</p>$" "" | safeHTML }}
+            {{ if gt (len .authors) 5 }}...{{ end }}
+        {{ else }}
+            [no author info]
+        {{ end }}
+        </div>
+
+
+      <div class="citation-details">
+        <span class="citation-publisher">
+            {{- .publisher | default "[no publisher info]" -}}
+        </span>
+        &nbsp;·&nbsp;
+        <span class="citation-date">
+            {{- if .date -}}
+            {{- time.Format "02 Jan 2006" .date -}}
+            {{- else -}}
+            [no date info]
+            {{- end -}}
+        </span>
+        &nbsp;·&nbsp;
+        <span class="citation-id">
+            {{- .id | default "[no id info]" -}}
+        </span>
+        </div>
+
+      {{ if eq .style "rich" }}
+        {{ if .citation.description }}
+            <div class="citation-description">
+            {{ .citation.description | markdownify | replaceRE "^<p>|</p>$" "" | safeHTML }}
+            </div>
+        {{ end }}
+      {{ end }}
+
+
+        {{ if gt (len .buttons) 0 }}
+            <div class="citation-buttons">
+                {{ range .buttons }}
+                {{ partial "button.html" (dict "type" .type "icon" .icon "text" .text "link" .link "style" "bare") }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{ if or (gt (len $citation.tags) 0) $citation.repo }}
+            {{ partial "tags.html" (dict "tags" $citation.tags "repo" $citation.repo) }}
+        {{ end }}
+    </div>
+  </div>
+</div>

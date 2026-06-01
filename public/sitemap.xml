@@ -4,6 +4,8 @@
   <url>
     <loc>http://localhost:8080/research/</loc>
   </url><url>
+    <loc>http://localhost:8080/publications/</loc>
+  </url><url>
     <loc>http://localhost:8080/projects/</loc>
   </url><url>
     <loc>http://localhost:8080/join/</loc>

@@ -2,11 +2,13 @@
 
 <div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
 
+    <h1 class="page-title">{{ .Title }}</h1>
+
   <p>The High-quality Imaging, Signals, N' Radar (HI-SNR) laboratory develops data assimilation, computational imaging, and signal processing methods in two areas:</p>
 
   {{ partial "accordion.html" (dict 
       "title" "1. Multistatic Radar for Environmental Applications" 
-      "content" "Your nested accordion body content descriptions go here."
+      "content" "We develop multistatic radars and algorithms for retreiving properties of the environment for the following purposes: \n\n 1. Equip scientists with the tools needed to improve our understanding of the environment. We develop radar-based methods for making measurements of environmental processes at a quality or scale that is not possible with existing tools. This includes projects such as generating 2D maps of the temperature distribution inside glaciers. \n\n 2. Develop systems than enable resource monitoring and improved resource management. This includes projects such as monitoring soil moisture for improved irrigaiton practices.  \n We are a crib to grave team that puts environmental solutions into the hands of scientists and and environmental agencies."
   ) }}
 
   
@@ -15,28 +17,26 @@
       "content" "We develop computational photography algorithms that improve image quality, make camera performance more equitable, and reconstruct 2-4D images from incomplete data."
   ) }}
 
-  {{ partial "section.html" site }}
-
   <h2>Research Areas in Computational Photography</h2>
 
   {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
         "style" "bare"
     ) }}
-    {{ $combinedText := printf "<p>We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
+    {{ $combinedText := printf "<p>We develop equitable imaging methods that ensure beautiful, crisp images for all users. From the technical side, this includes improved skin tone mapping, 3A algorithms, and composite photography that adapt to a user's skin tone and the surrounding scene. <br><br> <a href='/publications/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/photography.jpg" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Equitable Imaging" 
         "flip" true 
         "Text" ($combinedText | safeHTML)
     ) }}
 
   {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
@@ -45,7 +45,7 @@
     {{ $combinedText := printf "<p>We research human behavioral processes that influence subjective interpretation of image quality and integrate findings from these studies into improved imaging algorithms. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/people_in_photo.jpg" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Behavioral Studies for Improved Imaging" 
         "flip" false 
         "Text" ($combinedText | safeHTML)
@@ -53,7 +53,7 @@
 
 
   {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
@@ -62,7 +62,7 @@
     {{ $combinedText := printf "<p>We develop imaging methods and rendering algorithms for reconstructing 3D images from reduced dimensionality data. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/compressive_sensing.png" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Compressive Sensing" 
         "flip" true 
         "Text" ($combinedText | safeHTML)
@@ -71,7 +71,7 @@
   <h2>Research Areas in Environmental Radar</h2>
 
   {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
@@ -80,14 +80,14 @@
     {{ $combinedText := printf "<p>We are inventing radar techniques to measure ice properties at scales previously unexplored. The systems she develops provide measurements that better constrain ice sheet models to improve the accuracy of sea level rise predictions. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/approachingradar.jpg" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Cryosphere Radars" 
         "flip" true 
         "Text" ($combinedText | safeHTML)
     ) }}
 
   {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
@@ -96,14 +96,14 @@
     {{ $combinedText := printf "<p>We are developing radars and data assimilation techniques for 3D mapping of vegetation structure and water content to improve wildfire risk predictions, CO2 sequestration assessment, and ecosystem health. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/tree_radar.gif" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Biosphere Radar" 
         "flip" true 
         "Text" ($combinedText | safeHTML)
     ) }}
 
     {{ $button := partial "button.html" (dict 
-        "link" "research" 
+        "link" "/publications/" 
         "text" "See our publications" 
         "icon" "fa-solid fa-arrow-right" 
         "flip" true 
@@ -112,7 +112,7 @@
     {{ $combinedText := printf "<p>We are creating new methods of monitoring our limited resources including drone-based soil moisture estimation and satellite-based aquifer volume retrievals. <br><br> <a href='/research/' class='button bare'>See our publications <i class='fa-solid fa-arrow-right'></i></a></p> %s" 
     $button }} {{ partial "feature.html" (dict 
         "Image" "images/drone_ani.gif" 
-        "Link" "research" 
+        "link" "/publications/" 
         "Title" "Near Subsurface Radar" 
         "flip" true 
         "Text" ($combinedText | safeHTML)
@@ -127,7 +127,7 @@
 
   <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
     <iframe 
-      src="https://youtube.com" 
+      src="https://www.youtube.com/embed/WaF6N42GQiw?si=peiCi045mLVfM2el&amp;controls=0&amp;start=23" 
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
@@ -143,7 +143,7 @@
 
   {{ partial "search-info.html" . }}
 
-  {{ partial "list.html" (dict "context" . "data" "citations" "component" "citation" "style" "rich") }}
+  {{ partial "list.html" . }}
 
 </div>
 

@@ -14,11 +14,14 @@ header {
   box-shadow: var(--shadow);
   
   /* 
-     THE SINGLE-LINE SHADING MATRIX:
-     This stacks a 60% black tint layer directly on top of your asset image.
-     Change "/images/header-bg.jpg" to match your actual header image path!
+     1. THE UNIFIED FLAT OVERLAY LAYER:
+     This sets the image AND the blackout layer in one place.
+     
+     CONTROL DARKNESS HERE:
+     - rgba(0, 0, 0, 0.75) -> 75% Darkened (Image peeks through)
+     - rgba(0, 0, 0, 1.0)  -> 100% PITCH BLACK (Image completely vanishes)
   */
-  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), 
+  background: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 1.0)), 
               url("/images/header-bg.jpg") no-repeat center/cover !important;
 
   @if $sticky {
@@ -28,19 +31,7 @@ header {
   }
 }
 
-// Find this block in the middle of your file and replace it completely:
-.background:before {
-  // 1. Keeps the image variable that works on the footer/body
-  background-image: var(--image); 
-  
-  // 2. STACKS THE SHADING LAYER DIRECTLY IN FRONT OF THE IMAGE
-  // The first line acts as an overlay mask, the second line keeps your image
-  background: linear-gradient(rgba(0, 0, 0, 10.00), rgba(0, 0, 0, 10.00)), 
-              var(--image) no-repeat center/cover !important;
-}
-
-// 3. FORCE YOUR NAV TEXT AND LINKS TO WHITE
-// Since the image is now dark, your original dark text links won't be legible.
+// 2. FORCE YOUR NAV TEXT AND LINKS TO WHITE
 header a,
 .title,
 .subtitle,
@@ -48,7 +39,6 @@ header a,
 nav > a {
   color: #ffffff !important;
 }
-
 
 .home {
   display: flex;
@@ -129,11 +119,16 @@ nav > a {
   padding: 5px;
 }
 
-nav > a:hover {
-  color: var(--primary);
+/* Target anchor tags inside your header navigation layout */
+header a:hover, 
+nav a:hover,
+.navbar a:hover {
+    color: #0056b3 !important; /* Changes the font color on hover */
+    transition: color 0.2s ease-in-out; /* Smooths out the color change blink */
 }
 
-header {
+
+header:not([data-big]) {
   @media (max-width: $collapse) {
     justify-content: flex-end;
 
@@ -153,3 +148,44 @@ header {
   }
 }
 
+header[data-big] {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: $big-padding 20px;
+
+  /* 
+     3. FIXED FOR LAZY OVERRIDES:
+     Forces the same blackout background rules onto the 'data-big' header 
+     so it doesn't try to inherit old transparent rules from other styles.
+  */
+  background: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 1.0)), 
+              url("/images/header-bg.jpg") no-repeat center/cover !important;
+
+  @if $sticky {
+    top: unset;
+  }
+
+  .home {
+    flex-direction: column;
+    flex-grow: 0;
+  }
+
+  .logo {
+    height: $logo-big;
+  }
+
+  .title-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: var(--xxl);
+  }
+
+  .subtitle {
+    font-size: var(--large);
+  }
+}

@@ -5,7 +5,7 @@
   <summary style="font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; font-size: 1.1rem; color: #1a1a1a;">
     {{ $title }}
   </summary>
-  <div class="accordion-content" style="padding: 1rem 0 0.5rem 0; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem;">
-    {{ .content | safeHTML }}
+  <div class="accordion-content" style="text-align: left; padding: 1rem 2.5rem 0.5rem 1.5rem; line-height: 1.6; border-top: 1px solid #eee; margin-top: 0.5rem; margin-side: 0.5rem;">
+    {{ .content | markdownify }}
   </div>
 </details>

@@ -6,17 +6,17 @@
 -->
 <div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
 
-  <h1 style="font-size: 40px;"><b>Computational Imaging in Photography and Environmental Radar</b></h1>
+  <h1 style="font-size: 32px;"><b>Computational Imaging in Photography and Environmental Radar</b></h1>
 
   <!-- Sub-disciplines row with custom blue diamond layout markers -->
   <div class="intro-description">
-    <h5 class="lab-sub-disciplines">
+    <p class="lab-sub-disciplines" style="font-size: 15px;">
       Compressed Sensing <span>♦</span> 
       Data Fusion <span>♦</span> 
       Signal Processing <span>♦</span> 
       Adaptive Algorithms <span>♦</span> 
       Data Assimilation
-    </h5>
+    </p>
   </div>
 
   <!-- Carousel Render Pass -->
@@ -69,9 +69,22 @@
     "Text" ($combinedText | safeHTML)) 
   }}
 
-
-  <div class="epic-title" style="margin-top: 3rem; margin-bottom: 4rem;">
-    {{ partial "button.html" (dict "Link" "orca" "Text" "Documentation on Open Code Radar Architecture (ORCA)" "style" "bare" "background" "#ddddee") }}
+  <div class="epic-title" style="
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin: 2rem 0;
+    font-family: 'Barlow', sans-serif; 
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-align: center;
+  ">
+    {{ partial "button.html" (dict "Include" (dict 
+      "Link" "orca" 
+      "Text" "Documentation on Open Code Radar Architecture (ORCA)" 
+      "Style" "bare" 
+      "Background" "#ddddee"
+    )) }}
   </div>
 
 </div>

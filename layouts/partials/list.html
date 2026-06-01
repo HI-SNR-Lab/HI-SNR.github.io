@@ -1,20 +1,136 @@
-<ul class="citation-list" style="list-style-type: none; padding-left: 0; margin-top: 1.5rem;">
-  {{/* Loops through your page resources or site publication details */}}
-  {{ range .context.Pages }}
-    <li class="citation-item" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px dashed #eee;">
-      <!-- Main Citation Entry -->
-      <span class="citation-title" style="font-weight: 600; display: block; font-size: 1.1rem;">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </span>
+<!-- 1. GRAB DATA DIRECTLY FROM THE HUGO DATA FOLDER USING GLOBAL SITE CONTEXT -->
+{{- $citations := site.Data.citations -}}
+
+<div class="citations-list-wrapper" style="margin-top: 20px;">
+<div class="citations-list" id="publications-target-list">
+  
+  {{- if $citations }}
+    {{- range $index, $item := $citations }}
       
-      <!-- Optional Author Subtext Metadata -->
-      {{ if .Params.authors }}
-        <span class="citation-authors" style="color: var(--gray); font-size: 0.95rem; display: block; margin-top: 0.25rem;">
-          {{ delimit .Params.authors ", " }}
-        </span>
-      {{ end }}
-    </li>
-  {{ else }}
-    <p style="color: var(--gray); font-style: italic;">No publications found.</p>
-  {{ end }}
-</ul>
+      <!-- 2. CONVERT DATA SAFELY INTO STRINGS FOR SEARCHING -->
+      {{- $titleStr := $item.title | default "" | lower -}}
+      
+      {{- $authorSlice := slice -}}
+      {{- if $item.authors -}}
+        {{- if reflect.IsSlice $item.authors -}}
+          {{- range $item.authors -}}
+            {{- $authorSlice = $authorSlice | append (lower (string .)) -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $authorSlice = $authorSlice | append (lower (string $item.authors)) -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $authorStr := delimit $authorSlice " " -}}
+      
+      {{- $journalStr := $item.journal | default "" | lower -}}
+      {{- $yearStr := string ($item.year | default "") | lower -}}
+
+      <!-- 3. RENDER VISUAL CITATION CARD -->
+      <div class="citation-item-card" 
+           data-search-pool="{{ $titleStr }} {{ $authorStr }} {{ $journalStr }} {{ $yearStr }}"
+           style="padding: 15px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: block;">
+        
+        {{- if $item.title }}
+          <p style="margin: 0 0 5px 0; font-size: 1.1rem;">
+            <strong>
+              <!-- LINK ENGINE RESOLUTION ROOTED TO THE 'LINK' KEY -->
+              {{- $rawURL := "#" -}}
+              {{- if $item.link -}}
+                {{- $rawURL = $item.link -}}
+              {{- else if $item.url -}}
+                {{- $rawURL = $item.url -}}
+              {{- else if (hasPrefix ($item.id | default "") "doi:") -}}
+                {{- $rawURL = printf "https://doi.org" (strings.TrimPrefix "doi:" $item.id) -}}
+              {{- end -}}
+              
+              <a href="{{ $rawURL | safeURL }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #0056b3;">
+                {{ $item.title }}
+              </a>
+            </strong>
+          </p>
+        {{- end }}
+
+        {{- if $item.authors }}
+          <p style="margin: 0 0 3px 0; font-size: 0.95rem; color: #444; font-style: italic;">
+            {{- if reflect.IsSlice $item.authors -}}
+              {{- delimit $item.authors ", " -}}
+            {{- else -}}
+              {{- string $item.authors -}}
+            {{- end -}}
+          </p>
+        {{- end }}
+
+        <!-- POSITIONED DATE FIELD UNDERNEATH AUTHORS LIST -->
+        {{- if or $item.date $item.year }}
+          <p style="margin: 0 0 5px 0; font-size: 0.85rem; color: #777;">
+            <span>Published: <strong>{{ $item.date | default $item.year }}</strong></span>
+          </p>
+        {{- end }}
+
+        {{- if $item.journal }}
+          <p style="margin: 0; font-size: 0.9rem; color: #666;">
+            <span>{{ $item.journal }}</span>
+          </p>
+        {{- end }}
+
+      </div>
+    {{- end }}
+  
+  <!-- 4. VISUAL WARNING IN CASE THE DATA FILE IS EMPTY -->
+  {{- else }}
+    <div style="background: #fff3cd; color: #856404; padding: 20px; border: 1px solid #ffeeba; border-radius: 4px;">
+      <strong>Notice:</strong> No records found inside <code>/data/citations.yaml</code>. Ensure your script ran and populated the file.
+    </div>
+  {{- end }}
+
+</div>
+</div>
+
+
+<!-- 5. CLIENT-SIDE LIVE FILTER ENGINE -->
+<script>
+var siteSearchInput = document.getElementById("site-search-input");
+var siteSearchClearBtn = document.getElementById("site-search-clear-btn");
+var siteSearchCounter = document.getElementById("site-search-counter-text");
+var citationCards = document.querySelectorAll("#publications-target-list .citation-item-card");
+
+function updateSearchInfo(query, count) {
+if (!siteSearchCounter) return;
+if (query === "") {
+  siteSearchCounter.textContent = "Showing all " + citationCards.length + " items";
+  if (siteSearchClearBtn) siteSearchClearBtn.disabled = true;
+} else {
+  siteSearchCounter.textContent = "Found " + count + " matching results out of " + citationCards.length + " items";
+  if (siteSearchClearBtn) siteSearchClearBtn.disabled = false;
+}
+}
+
+if (citationCards.length > 0) {
+updateSearchInfo("", citationCards.length);
+}
+
+function onSearchInput(inputElement) {
+var query = inputElement.value.toLowerCase().trim();
+var matchCount = 0;
+
+citationCards.forEach(function(card) {
+  var pool = card.getAttribute("data-search-pool") || "";
+  if (query === "" || pool.indexOf(query) !== -1) {
+    card.style.display = "block";
+    matchCount++;
+  } else {
+    card.style.display = "none";
+  }
+});
+
+updateSearchInfo(query, matchCount);
+}
+
+function onSearchClear() {
+if (siteSearchInput) {
+  siteSearchInput.value = "";
+  onSearchInput(siteSearchInput);
+  siteSearchInput.focus();
+}
+}
+</script>

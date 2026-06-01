@@ -1,0 +1,27 @@
+- title: Passive Synchronization
+  subtitle: matlab code
+  group: featured
+  image: images/passive_sync.png
+  link: https://github.com/bienert/Bistatic_Radar_Public
+  description: Code for removing clock phase offset in bistatic radar data.
+  repo: bienert/Bistatic_Radar_Public
+  tags:
+    - code
+
+- title: Instructions for Building SDR Receiver
+  subtitle: for use with an ApRES as a bistatic radar
+  group: featured
+  image: images/radar_components.jpg
+  link: https://github.com/bienert/Bistatic_Radar/blob/main/Bienert's%20Bistatic%20Manual.pdf
+  description: Instruction manual for how to build and program an Ettus E312 SDR receiver to be used with an ApRES as a bistatic radar.
+  repo: bienert/Bistatic_Radar_Public
+  tags:
+    - hardware
+
+- title: Store Glacier Greenland Bistatic Radar Data
+  subtitle: centered at 330MHz, 1km thick ice
+  image: images/snow_antenna.jpg
+  link: https://www.usap-dc.org/view/dataset/601472
+  description: This dataset includes raw, uncalibrated voltage vs time measurements from a bistatic radar receiver. We also include some processed data including upsampled matched filtered data, GPS receiver position, antenna separation
+  tags:
+    - data

@@ -1,0 +1,288 @@
+# DO NOT EDIT, GENERATED AUTOMATICALLY
+
+- id: doi:10.1017/jog.2025.10114
+  title: Polarimetric multi-offset radio-echo sounding with a radio frequency-over-fiber
+    ApRES system
+  authors:
+  - Daniel F. May
+  - Dustin M. Schroeder
+  - Paul T. Summers
+  - Thomas O. Teisberg
+  - Anna L. Broome
+  - Nicole L. Bienert
+  - Jaiden Zak
+  - Tun Jan Young
+  - Marianne S. Karplus
+  - Slawek M. Tulaczyk
+  publisher: Journal of Glaciology
+  date: '2025-12-12'
+  link: https://doi.org/hbmczn
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1029/2024RG000842
+  title: 'Radar Polarimetry in Glaciology: Theory, Measurement Techniques, and Scientific
+    Applications for Investigating the Anisotropy of Ice Masses'
+  authors:
+  - Benjamin H. Hills
+  - T. J. Young
+  - David A. Lilien
+  - Esther Babcock
+  - Nicole Bienert
+  - Donald Blankenship
+  - John Bradford
+  - Giancorrado Brighi
+  - Alex Brisbourne
+  - "J\xF8rgen Dall"
+  - Reinhard Drews
+  - Olaf Eisen
+  - M. Reza Ershadi
+  - Tamara A. Gerber
+  - Nicholas Holschuh
+  - Daniela Jansen
+  - Thomas M. Jordan
+  - Nanna B. Karlsson
+  - Jilu Li
+  - "Carlos Mart\xEDn"
+  - Kenichi Matsuoka
+  - Daniel May
+  - Falk M. Oraschewski
+  - John Paden
+  - Nicholas M. Rathmann
+  - Neil Ross
+  - Dustin M. Schroeder
+  - Martin Siegert
+  - Matthew R. Siegfried
+  - Emma Smith
+  - Ole Zeising
+  publisher: Reviews of Geophysics
+  date: '2025-11-02'
+  link: https://doi.org/g99tx6
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/igarss53475.2024.10640578
+  title: A Concept For Multistatic Radar Tomography Of Crop Root Zone Soil Moisture
+  authors:
+  - Nicole Bienert
+  - Mahta Moghaddam
+  publisher: IGARSS 2024 - 2024 IEEE International Geoscience and Remote Sensing Symposium
+  date: '2024-07-07'
+  link: https://doi.org/g8pz27
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/TGRS.2022.3213047
+  title: 'Bistatic Radar Tomography of Shear Margins: Simulated Temperature and Basal
+    Material Inversions'
+  authors:
+  - Nicole Bienert
+  - Dustin M. Schroeder
+  - Paul Summers
+  publisher: IEEE Transactions on Geoscience and Remote Sensing
+  date: '2023-01-01'
+  link: https://doi.org/g8n25g
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: sources.py
+  file: sources.yaml
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/36/10006360/9989342/biene5-3213047-large.gif
+- id: doi:10.1109/igarss46834.2022.9883837
+  title: Processing and Detecting Artifacts in Multi-Input Multi-Output Phase-Sensitive
+    ICE Penetrating Radar Data
+  authors:
+  - Akua A. McLeod
+  - Sean T. Peters
+  - Riley Culberg
+  - Dustin M. Schroeder
+  - Nicole L. Bienert
+  - Winnie Chu
+  - Tun Jan Young
+  - Poul Christoffersen
+  publisher: IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium
+  date: '2022-07-17'
+  link: https://doi.org/g8n7ss
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/igarss46834.2022.9883236
+  title: SFMCW Orthogonal Wave Beamforming Concept for Distributed Orbital Sounding
+  authors:
+  - Nicole Bienert
+  - Mark S. Haynes
+  - Dustin M. Schroeder
+  - Robert M. Beauchamp
+  publisher: IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium
+  date: '2022-07-17'
+  link: https://doi.org/g8n7st
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/igarss46834.2022.9883620
+  title: Side-Facing UHF-Band Radar System to Monitor Tree Water Status
+  authors:
+  - Krishna Rao
+  - Yesenia J. Ulloa
+  - Nicole Bienert
+  - Nona R. Chiariello
+  - Natan M. Holtzman
+  - Gregory R. Quetin
+  - Sean T. Peters
+  - Keith Winstein
+  - Davide Castelletti
+  - Dustin M. Schroeder
+  - Alexandra G. Konings
+  publisher: IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium
+  date: '2022-07-17'
+  link: https://doi.org/g7pkmp
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/TGRS.2022.3147172
+  title: Post-Processing Synchronized Bistatic Radar for Long Offset Glacier Sounding
+  authors:
+  - Nicole L. Bienert
+  - Dustin M. Schroeder
+  - Sean T. Peters
+  - Emma J. MacKie
+  - Eliza J. Dawson
+  - Matthew R. Siegfried
+  - Rohan Sanda
+  - Poul Christoffersen
+  publisher: IEEE Transactions on Geoscience and Remote Sensing
+  date: '2022-01-01'
+  link: https://doi.org/g8n25h
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: sources.py
+  file: sources.yaml
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/36/9633014/9694618/biene4abcdefghi-3147172-large.gif
+- id: doi:10.1109/igarss47720.2021.9554746
+  title: 'Debris: Distributed Element Beamformer Radar for Ice and Subsurface Sounding'
+  authors:
+  - Mark S. Haynes
+  - Robert M. Beauchamp
+  - Ala Khazendar
+  - Rayan Mazouz
+  - Marco B. Quadrelli
+  - Paolo Focardi
+  - Richard E. Hodges
+  - William Bertiger
+  - Nicole Bienert
+  publisher: 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS
+  date: '2021-07-11'
+  link: https://doi.org/g8pz28
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/igarss47720.2021.9553237
+  title: Glaciological Constraints on Link Budgets for Orbital Radar Sounding of Earth's
+    ICE Sheets
+  authors:
+  - Dustin M. Schroeder
+  - Nicole L. Bienert
+  - Riley Culberg
+  - Emma J. MacKie
+  - Thomas O. Teisberg
+  - Winnie Chu
+  - Duncan A. Young
+  publisher: 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS
+  date: '2021-07-11'
+  link: https://doi.org/g6stmt
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1029/2020JF006023
+  title: 'Inferring Ice Fabric From Birefringence Loss in Airborne Radargrams: Application
+    to the Eastern Shear Margin of Thwaites Glacier, West Antarctica'
+  authors:
+  - T. J. Young
+  - D. M. Schroeder
+  - T. M. Jordan
+  - P. Christoffersen
+  - S. M. Tulaczyk
+  - R. Culberg
+  - N. L. Bienert
+  publisher: 'Journal of Geophysical Research: Earth Surface'
+  date: '2021-05-01'
+  link: https://doi.org/g78n3v
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: sources.py
+  file: sources.yaml
+  image: https://agupubs.onlinelibrary.wiley.com/cms/asset/84464ab5-18fd-4b4b-8a2f-613dc5ca5c3e/jgrf21358-fig-0001-m.jpg
+- id: doi:10.1109/igarss39084.2020.9323969
+  title: Processing-Based Synchronization Approach for Bistatic Radar Glacial Tomography
+  authors:
+  - Nicole L. Bienert
+  - Dustin M. Schroeder
+  - Sean T. Peters
+  - Matthew R. Siegfried
+  publisher: IGARSS 2020 - 2020 IEEE International Geoscience and Remote Sensing Symposium
+  date: '2020-09-26'
+  link: https://doi.org/g8pz3b
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.1109/aero.2017.7943897
+  title: 'Inflatable antenna for CubeSat: A new spherical design for increased X-band
+    gain'
+  authors:
+  - Alessandra Babuscia
+  - Jonathan Sauder
+  - Aman Chandra
+  - Jekan Thangavelautham
+  - Lorenzo Feruglio
+  - Nicole Bienert
+  publisher: 2017 IEEE Aerospace Conference
+  date: '2017-03-01'
+  link: https://doi.org/g8pwjd
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.5194/egusphere-egu24-61
+  title: Multi-Offset Radio-Echo Sounding for Estimation of Englacial and Subglacial
+    Thermal Conditions and Material Properties
+  authors:
+  - Daniel May
+  - Dustin Schroeder
+  - Paul Summers
+  - Thomas Teisberg
+  - Anna Broome
+  - Nicole Bienert
+  publisher: Copernicus GmbH
+  date: '2025-01-20'
+  link: https://doi.org/g8pz3c
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml
+- id: doi:10.5194/egusphere-egu21-2107
+  title: Polarimetric radar-sounding to infer and quantify shear margin ice fabric
+    anisotropy
+  authors:
+  - Tun Jan Young
+  - Thomas M Jordan
+  - "Carlos Mart\xEDn"
+  - Dustin M Schroeder
+  - Poul Christoffersen
+  - Slawek M Tulaczyk
+  - Riley Culberg
+  - Nicole L Bienert
+  publisher: Copernicus GmbH
+  date: '2021-03-03'
+  link: https://doi.org/g8pz3d
+  orcid: 0000-0002-9428-327X
+  nicole-bienert: true
+  plugin: orcid.py
+  file: orcid.yaml

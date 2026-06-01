@@ -2,5 +2,5 @@
 title: "Team"
 layout: "team"
 menu: "main"
-weigt: 30
+weigt: 20
 ---

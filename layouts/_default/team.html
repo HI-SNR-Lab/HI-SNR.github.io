@@ -2,11 +2,13 @@
 
 <div class="markdown-body single-content" style="padding: 0 40px; box-sizing: border-box; width: 100%; max-width: 1200px; margin: 0 auto;">
 
+  <div style="display: flow-root; width: 100%; margin-bottom: 25px;">
+    
+    <h1 class="page-title" style="margin-top: 10px !important; margin-bottom: 5px !important; padding: 0 !important;">{{ .Title }}</h1>
 
-  <h1> {{ partial "icon.html" (dict "Icon" "fa-solid fa-users") }}Team </h1>
+    <p style="margin-top: 0 !important; margin-bottom: 0 !important; text-align: left;">At HI-SNR Lab, we believe that a joyful and inclusive environment drives innovation. Our team is dedicated to collaboration and creativity, celebrating our differences, and supporting one another. Join us on our journey to bring new imaging systems and methods to our communities!</p>
 
-  <p>At HI-SNR Lab, we believe that a joyful and inclusive environment drives innovation. Our team is dedicated to collaboration and creativity, celebrating our differences, and supporting one another. Join us on our journey to bring new imaging systems and methods to our communities!</p>
-
+  </div>
   {{ partial "section.html" . }}
 
   <div class="section section-pi"> 
@@ -120,92 +122,32 @@
     margin-bottom: 4px !important;
   }
 
-  .section-divider {
-    margin: 4px 0 !important;
-    padding: 4;
-  }
-
-  .section-pi {
-    display: flex;
-    margin-left: 4px 0 !important;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding: 0px 0;
-    background: #eef2ff
-  }
-
-  .section-grad {
+  /* 
+    THE BOX-SHADOW TRICK: 
+    This creates a full-width background color that spans infinitely to the left and right, 
+    WITHOUT using '100vw' or negative margins. It prevents layout shifts entirely.
+  */
+  .section-pi, .section-grad, .section-undergrad, .section-alumni, .section-past {
     display: flex;
     flex-direction: column;
-
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-
-    padding: 20px 80px;
-    box-sizing: border-box;
-
     align-items: flex-start;
     text-align: left;
-
-    background: #ddddee;
-  }
-
-  .section-undergrad {
-    display: flex;
-    flex-direction: column;
-
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-
-    padding: 20px 80px;
+    padding: 20px 0;
     box-sizing: border-box;
-
-    align-items: flex-start;
-    text-align: left;
-
-    background: #eef1ff;
+    width: 100%;
+    
+    /* This magic line pushes the background color to the screen edges safely */
+    box-shadow: 0 0 0 100vw var(--bg-color);
+    clip-path: inset(0 -100vw);
+    background: var(--bg-color);
   }
 
-  .section-alumni {
-    display: flex;
-    flex-direction: column;
-
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-
-    padding: 20px 80px;
-    box-sizing: border-box;
-
-    align-items: flex-start;
-    text-align: left;
-
-    background: #ddddee;
-  }
-
-  .section-past {
-    display: flex;
-    flex-direction: column;
-
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-
-    padding: 20px 80px;
-    box-sizing: border-box;
-
-    align-items: flex-start;
-    text-align: left;
-
-    background: #eef2ff;
-  }
-
-  /* .section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding: 30px 0;
-  } */
+  /* Assign the specific background colors as variables */
+  .section-pi        { --bg-color: #eef2ff; align-items: center; text-align: center; }
+  .section-grad      { --bg-color: #ddddee; }
+  .section-undergrad { --bg-color: #eef1ff; }
+  .section-alumni    { --bg-color: #ddddee; }
+  .section-past      { --bg-color: #eef2ff; }
 </style>
 
 
