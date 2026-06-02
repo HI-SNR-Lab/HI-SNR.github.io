@@ -7,21 +7,18 @@ on:
     types:
       - completed
     branches:
-      - gh-pages
+      - main
 
-  # run if user manually requests it
+  # Allows you to run this manually from the Actions tab
   workflow_dispatch:
 
+# Grant the permission scopes required for GitHub Pages
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  update-url:
-    # only run on user instance of template, not template itself
-    if: github.repository != 'greenelab/lab-website-template'
-    uses: ./.github/workflows/update-url.yaml
-
   build-site:
-    needs: update-url
-    if: needs.update-url.outputs.changed == 'true'
-    uses: ./.github/workflows/build-site.yaml
+    # We removed the broken 'if: needs.update-url...' line so it runs cleanly
+    uses: HI-SNR-Lab/HI-SNR.github.io/.github/workflows/build-site.yaml@main
