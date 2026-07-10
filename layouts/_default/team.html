@@ -20,7 +20,10 @@
         {{ if $members }}
           {{ range where $members.Pages "Params.role" "pi" }}
             <div class="team-member"> 
+              
               {{ partial "portrait.html" (dict "context" . "lookup" .Params.slug) }} 
+              {{ partial "member-links.html" . }}
+              
             </div>
           {{ end }}
         {{ else }}
@@ -39,7 +42,10 @@
         {{ if $members }}
           {{ range where $members.Pages "Params.role" "grad" }}
             <div class="team-member"> 
+              
               {{ partial "portrait.html" (dict "context" . "lookup" .Params.slug) }} 
+              {{ partial "member-links.html" . }}
+
             </div>
           {{ end }}
         {{ else }}
@@ -58,7 +64,10 @@
         {{ if $members }}
           {{ range where $members.Pages "Params.role" "undergrad" }}
             <div class="team-member"> 
+
               {{ partial "portrait.html" (dict "context" . "lookup" .Params.slug) }} 
+              {{ partial "member-links.html" . }}
+
             </div>
           {{ end }}
         {{ else }}
@@ -78,7 +87,10 @@
         {{ if $members }}
           {{ range where $members.Pages "Params.role" "alumni" }}
             <div class="team-member"> 
+              
               {{ partial "portrait.html" (dict "context" . "lookup" .Params.slug) }} 
+              {{ partial "member-links.html" . }}
+
             </div>
           {{ end }}
         {{ else }}
@@ -97,7 +109,10 @@
         {{ if $members }}
           {{ range where $members.Pages "Params.role" "past" }}
             <div class="team-member"> 
+              
               {{ partial "portrait.html" (dict "context" . "lookup" .Params.slug) }} 
+              {{ partial "member-links.html" . }}
+              
             </div>
           {{ end }}
         {{ else }}
@@ -148,6 +163,19 @@
   .section-undergrad { --bg-color: #eef1ff; }
   .section-alumni    { --bg-color: #ddddee; }
   .section-past      { --bg-color: #eef2ff; }
+
+  /* ==========================================================================
+    SOCIALS BUTTONS FOR MEMBERS
+    ========================================================================== */
+
+  .linkedin-icon {
+    color: #555; /* Default neutral gray */
+    transition: color 0.2s ease;
+  }
+
+  .linkedin-icon:hover {
+    color: #0077b5; /* Official LinkedIn Blue */
+  }
 </style>
 
 

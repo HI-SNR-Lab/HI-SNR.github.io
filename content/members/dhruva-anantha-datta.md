@@ -1,7 +1,7 @@
 ---
 name: Dhruva Anantha Datta
 image: images/members/Dhruva_Ananth_Datta.jpg
-description: Masters Student
+affiliation: Masters Student
 role: past
 
 links:

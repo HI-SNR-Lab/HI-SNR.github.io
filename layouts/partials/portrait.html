@@ -67,12 +67,6 @@
       </span>
     {{ end }}
 
-    {{ if or $member.Params.description $type }}
-      <span class="portrait-description">
-        {{ $member.Params.description | default $type.description }}
-      </span>
-    {{ end }}
-
     {{ if $member.Params.affiliation }}
       <span class="portrait-affiliation">
         {{ $member.Params.affiliation }}

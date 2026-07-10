@@ -1,7 +1,7 @@
 ---
 name: Eric Gosnell
 image: images/members/Eric_Gosnell.jpg
-description: Undergraduate Student Researcher
+affiliation: Undergraduate Researcher
 role: past
 
 links:

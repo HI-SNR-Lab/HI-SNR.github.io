@@ -1,7 +1,7 @@
 ---
 name: Irati Ortuondo
 image: images/members/Irati_Ortuondo.jpg
-description: Undergraduate Student Researcher
+affiliation: Undergraduate Researcher
 role: past
 ---
 

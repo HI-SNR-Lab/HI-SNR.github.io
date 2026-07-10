@@ -2,7 +2,7 @@
 name: Olivia Egbert
 image: images/members/Olivia_Egbert.jpg
 role: grad
-description: Masters Student
+affiliation: Masters Student
 
 links:
   linkedin: olive-egbert

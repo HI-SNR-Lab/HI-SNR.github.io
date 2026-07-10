@@ -1,0 +1,33 @@
+{{ if .Params.links }}
+  <div class="member-links">
+    {{ range $name, $url := .Params.links }}
+      
+      {{ $hoverText := printf "%s Page" (humanize $name) }}
+      {{ if eq $name "home-page" }}
+        {{ $hoverText = "Personal Website" }}
+      {{ end }}
+      
+      <a href="{{ $url }}" 
+         class="link-{{ $name }}" 
+         target="_blank" 
+         rel="noopener" 
+         aria-label="{{ humanize $name }}" 
+         title="{{ $hoverText }}" 
+         style="text-decoration: none !important;">
+
+        {{ if eq $name "linkedin" }}
+          <i class="fab fa-linkedin social-icon"></i>
+        {{ else if eq $name "github" }}
+          <i class="fab fa-github social-icon"></i>
+        {{ else if eq $name "orcid" }}
+          <i class="fab fa-orcid social-icon"></i>
+        {{ else if eq $name "home-page" }}
+          <i class="fa-regular fa-window-maximize social-icon"></i>
+        {{ else }}
+          {{ humanize $name }}
+        {{ end }}
+
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

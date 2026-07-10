@@ -1,7 +1,7 @@
 ---
 name: Carson Anderson
 image: images/members/carson_anderson.png
-description: Masters Student
+affiliation: Masters Student
 role: alumni
 ---
 
