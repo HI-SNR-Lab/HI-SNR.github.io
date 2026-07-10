@@ -2,48 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:8080/research/</loc>
+    <loc>http://localhost:1313/research/</loc>
   </url><url>
-    <loc>http://localhost:8080/publications/</loc>
+    <loc>http://localhost:1313/publications/</loc>
   </url><url>
-    <loc>http://localhost:8080/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
   </url><url>
-    <loc>http://localhost:8080/join/</loc>
+    <loc>http://localhost:1313/join/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/austin-vera/</loc>
+    <loc>http://localhost:1313/members/austin-vera/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/carson-anderson/</loc>
+    <loc>http://localhost:1313/members/carson-anderson/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/christopher-barbarie/</loc>
+    <loc>http://localhost:1313/members/christopher-barbarie/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/colin-chow/</loc>
+    <loc>http://localhost:1313/members/colin-chow/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/dhruva-anantha-datta/</loc>
+    <loc>http://localhost:1313/members/dhruva-anantha-datta/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/edie-goldner/</loc>
+    <loc>http://localhost:1313/members/edie-goldner/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/eric-gosnell/</loc>
+    <loc>http://localhost:1313/members/eric-gosnell/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/irati-ortuondo/</loc>
+    <loc>http://localhost:1313/members/gaby-hutabarat/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/liza-gunther/</loc>
+    <loc>http://localhost:1313/members/irati-ortuondo/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/nicole-bienert/</loc>
+    <loc>http://localhost:1313/members/liza-gunther/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/olivia-egbert/</loc>
+    <loc>http://localhost:1313/members/nicole-bienert/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/piper-morison/</loc>
+    <loc>http://localhost:1313/members/olivia-egbert/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/zoe-worrall/</loc>
+    <loc>http://localhost:1313/members/piper-morison/</loc>
   </url><url>
-    <loc>http://localhost:8080/categories/</loc>
+    <loc>http://localhost:1313/members/zoe-worrall/</loc>
   </url><url>
-    <loc>http://localhost:8080/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:8080/members/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>http://localhost:8080/tags/</loc>
+    <loc>http://localhost:1313/members/</loc>
   </url><url>
-    <loc>http://localhost:8080/team/</loc>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/team/</loc>
   </url>
 </urlset>
