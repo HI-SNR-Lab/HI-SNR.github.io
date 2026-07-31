@@ -1,5 +1,15 @@
-- title: Passive Synchronization
-  subtitle: matlab code
+- title: ORCA: Open Radar Code Architecture
+  subtitle: SDR Radar Codebase
+  group: featured
+  image: images/summer_2025_testing.png
+  link: https://orca.hisnr.com/
+  description: Codebase and instructions for operating Ettus Software Defined Radios (SDRs) as radar systems. The ORCA initiative aims to streamline and reduce barriers to radar research. Join the community!
+  repo: HI-SNR-Lab/uhd_radar
+  tags:
+    - code
+    
+- title: Passive Synchronization Algorithm
+  subtitle: Matlab Code
   group: featured
   image: images/passive_sync.png
   link: https://github.com/bienert/Bistatic_Radar_Public
@@ -8,8 +18,8 @@
   tags:
     - code
 
-- title: Instructions for Building SDR Receiver
-  subtitle: for use with an ApRES as a bistatic radar
+- title: Instructions for Building Bistatic Passive SDR Receiver
+  subtitle: Instruction Manual & SDR Code
   group: featured
   image: images/radar_components.jpg
   link: https://github.com/bienert/Bistatic_Radar/blob/main/Bienert's%20Bistatic%20Manual.pdf
@@ -17,6 +27,7 @@
   repo: bienert/Bistatic_Radar_Public
   tags:
     - hardware
+    - code
 
 - title: Store Glacier Greenland Bistatic Radar Data
   subtitle: centered at 330MHz, 1km thick ice
