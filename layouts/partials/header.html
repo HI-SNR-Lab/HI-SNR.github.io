@@ -33,17 +33,17 @@
         {{- if $logo }}
           <span class="logo">
             {{- if $svg }}
-              <span class="inline-svg-logo big-home-svg">
+              <span class="inline-svg-logo big-home-svg" style="display: inline-block; margin-bottom: 200px;">
                 {{ (os.ReadFile "static/images/logo.svg") | safeHTML }}
               </span>
             {{- else }}
-              <img src="{{ $logo | relURL }}" alt="logo" class="tiny-site-logo big-home-logo">
+              <img src="{{ $logo | relURL }}" alt="logo" class="tiny-site-logo big-home-logo" style="height: 80px !important; width: auto !important; max-height: none !important; ">
             {{- end }}
           </span>
         {{- end }}
         
         {{- if ne site.Params.logo_text false }}
-          <span class="title-text" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <span class="title-text" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 24px !important;">
             {{- if and site.Title (ne site.Params.show_title false) }}
               <span class="title big-home-title">
                 {{ site.Title }}
@@ -151,7 +151,7 @@ header.site-header .home {
 }
 
 .tiny-site-logo, .inline-svg-logo svg {
-  height: 40px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -202,7 +202,7 @@ header.site-header.is-homepage-hero {
 }
 
 .big-home-logo, .big-home-svg svg {
-  height: 65px !important; /* Makes logo icon standout */
+  height: 300px !important; /* Makes logo icon standout */
   width: auto;
 }
 
