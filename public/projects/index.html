@@ -290,8 +290,136 @@ h1,
 <section class="site-section-divider section-light-bg">
   <div class="section-inner-wrapper">
 
-
 </div>
+
+<div class="projects-container">
+  
+    <div class="project-card group-featured">
+      
+      
+        
+        <img src="/images/passive_sync.png" alt="Passive Synchronization" class="project-image">
+      
+
+      <div class="project-content">
+        <h2><a href="https://github.com/bienert/Bistatic_Radar_Public" target="_blank" rel="noopener">Passive Synchronization</a></h2>
+        
+        
+          <span class="project-subtitle">matlab code</span>
+        
+        
+        <p class="project-description">Code for removing clock phase offset in bistatic radar data.</p>
+        
+        
+          <div class="project-repo">
+            <strong>Repository:</strong> <a href="https://github.com/bienert/Bistatic_Radar_Public" target="_blank">bienert/Bistatic_Radar_Public</a>
+          </div>
+        
+
+        <div class="project-tags">
+          
+            <span class="tag tag-code">code</span>
+          
+        </div>
+      </div>
+
+    </div>
+  
+    <div class="project-card group-featured">
+      
+      
+        
+        <img src="/images/radar_components.jpg" alt="Instructions for Building SDR Receiver" class="project-image">
+      
+
+      <div class="project-content">
+        <h2><a href="https://github.com/bienert/Bistatic_Radar/blob/main/Bienert%27s%20Bistatic%20Manual.pdf" target="_blank" rel="noopener">Instructions for Building SDR Receiver</a></h2>
+        
+        
+          <span class="project-subtitle">for use with an ApRES as a bistatic radar</span>
+        
+        
+        <p class="project-description">Instruction manual for how to build and program an Ettus E312 SDR receiver to be used with an ApRES as a bistatic radar.</p>
+        
+        
+          <div class="project-repo">
+            <strong>Repository:</strong> <a href="https://github.com/bienert/Bistatic_Radar_Public" target="_blank">bienert/Bistatic_Radar_Public</a>
+          </div>
+        
+
+        <div class="project-tags">
+          
+            <span class="tag tag-hardware">hardware</span>
+          
+        </div>
+      </div>
+
+    </div>
+  
+    <div class="project-card ">
+      
+      
+        
+        <img src="/images/snow_antenna.jpg" alt="Store Glacier Greenland Bistatic Radar Data" class="project-image">
+      
+
+      <div class="project-content">
+        <h2><a href="https://www.usap-dc.org/view/dataset/601472" target="_blank" rel="noopener">Store Glacier Greenland Bistatic Radar Data</a></h2>
+        
+        
+          <span class="project-subtitle">centered at 330MHz, 1km thick ice</span>
+        
+        
+        <p class="project-description">This dataset includes raw, uncalibrated voltage vs time measurements from a bistatic radar receiver. We also include some processed data including upsampled matched filtered data, GPS receiver position, antenna separation</p>
+        
+        
+
+        <div class="project-tags">
+          
+            <span class="tag tag-data">data</span>
+          
+        </div>
+      </div>
+
+    </div>
+  
+</div>
+
+<style>
+    .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    }
+    .project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    }
+    .project-content {
+    padding: 15px;
+    }
+    .project-subtitle {
+    font-style: italic;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+    }
+    .tag {
+    background: #eee;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    }
+</style>
+
 
 
     </main>

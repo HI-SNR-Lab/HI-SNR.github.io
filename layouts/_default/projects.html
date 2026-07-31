@@ -10,7 +10,77 @@
 
     {{ partial "section.html" }}
 
-
 </div>
+
+<div class="projects-container">
+  {{ range .Site.Data.projects }}
+    <div class="project-card {{ if .group }}group-{{ .group }}{{ end }}">
+      
+      {{ if .image }}
+        <!-- Hugo targets images in the static/ folder or page bundle assets -->
+        <img src="{{ .image | relURL }}" alt="{{ .title }}" class="project-image">
+      {{ end }}
+
+      <div class="project-content">
+        <h2><a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a></h2>
+        
+        {{ if .subtitle }}
+          <span class="project-subtitle">{{ .subtitle }}</span>
+        {{ end }}
+        
+        <p class="project-description">{{ .description }}</p>
+        
+        {{ if .repo }}
+          <div class="project-repo">
+            <strong>Repository:</strong> <a href="https://github.com/{{ .repo }}" target="_blank">{{ .repo }}</a>
+          </div>
+        {{ end }}
+
+        <div class="project-tags">
+          {{ range .tags }}
+            <span class="tag tag-{{ . }}">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  {{ end }}
+</div>
+
+<style>
+    .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    }
+    .project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    }
+    .project-content {
+    padding: 15px;
+    }
+    .project-subtitle {
+    font-style: italic;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+    }
+    .tag {
+    background: #eee;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    }
+</style>
+
 
 {{ end }}
