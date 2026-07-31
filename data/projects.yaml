@@ -1,7 +1,7 @@
 - title: "ORCA: Open Radar Code Architecture"
   subtitle: SDR Radar Codebase
   group: featured
-  image: images/summer_2025_testing.png
+  image: images/summer_2025_testing.jpg
   link: https://orca.hisnr.com/
   description: Codebase and instructions for operating Ettus Software Defined Radios (SDRs) as radar systems. The ORCA initiative aims to streamline and reduce barriers to radar research. Join the community!
   repo: HI-SNR-Lab/uhd_radar
