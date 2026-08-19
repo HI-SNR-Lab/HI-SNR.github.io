@@ -17,6 +17,8 @@
 
         {{ if eq $name "linkedin" }}
           <i class="fab fa-linkedin social-icon"></i>
+        {{ else if eq $name "email" }}
+          <i class="fa fa-envelope"></i>
         {{ else if eq $name "github" }}
           <i class="fab fa-github social-icon"></i>
         {{ else if eq $name "orcid" }}

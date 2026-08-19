@@ -7,6 +7,7 @@ role: grad
 links:
     linkedin: https://linkedin.com/in/zoeworrall
     github:   https://github.com/zoe-worrall
+    email:    mailto:zoe.worrall@colorado.edu
 
 ---
 
